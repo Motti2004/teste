@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
-import sqlite3
-import os
-from database import criar_tabela, inserir_arvore
-criar_tabela()
+from supabase import create_client, Client
+
+supabase_url=("https://qrqzmiodksobvufaqmdx.supabase.co")
+supabase_key=("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFycXptaW9ka3NvYnZ1ZmFxbWR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MzM2OTQsImV4cCI6MjA3NTAwOTY5NH0.MXWNzHQizABV0_5vS1bp__R1ozlF48G-uvQzZ9X-yOI")
+
+supabase: Client = create_client(supabase_url, supabase_key)
+
 df = pd.read_excel("Dados_teste.xlsx")
 st.set_page_config(page_title="Leaf Search")
 st.sidebar.header("Menu")
@@ -49,22 +52,33 @@ elif pagina == "Cadastro de árvore":
         input_name = st.text_input("Nome: ", placeholder="Insira seu nome aqui.")
         input_email = st.text_input("Email: ", placeholder="Insira seu email aqui.")
         input_telefone = st.text_input("Telefone: ", placeholder="Insira seu número de telefone aqui.")
-        input_altura = st.text_input("Altura", placeholder="Insira a altura estimada da árvores.")
-        input_diametro = st.text_input("Diametro", placeholder="Insira a diametro estimada da árvores.")
-        foto = st.file_uploader("Envie uma foto da altura e diametro (com alguma referencia para ter uma comparação e medida): ", type=["jpg","png","jpeg"])
-        input_caracteristicas = st.text_input("Características", placeholder="Insira as caracteristicas como formatoda folha, cor da flor, como é o fruto e etc.")
-        input_coordenadas = st.text_input("Coordenadas", placeholder="Insira as coordenadas da árvore. exemplo: -23.5... e -46.8...")
-        foto = st.file_uploader("Envie uma foto da árvore (se apresenta a flor e fruto também mande a foto ): u", type=["jpg","png","jpeg"])
+        input_altura = st.text_input("Altura(m)", placeholder="Exemplo: 9, 3.5, 1.80, etc..")
+        input_diametro = st.text_input("Diametro(cm)", placeholder="Exemplo: 10, 40, 80, etc. .")
+        input_caracteristicas = st.text_input("Características", placeholder="Ex: formatoda folha, cor da flor, como é o fruto e etc.")
+        input_coordenadas = st.text_input("Coordenadas", placeholder="Exemplo: -23.5... e -46.8...")
+        foto = st.file_uploader("Envie uma foto da árvore (altura, diametro, folha, flor, fruto e árvore ): u", type=["jpg","png","jpeg"])
         botão_submit = form.form_submit_button("Confirmar")
-        foto_path = None
-        if botão_submit:
-            if foto is not None:
-                os.makedirs("fotos", exist_ok=True)
-                foto_path= os.path.join("fotos", foto.name)
-                with open (foto_path, "wb") as f:
-                    f.write(foto.getbuffer())
-            inserir_arvore(input_name, input_email, input_telefone, input_altura, input_diametro, input_caracteristicas, input_coordenadas, foto_path)
-            st.success("Árvore cadastrada com sucesso! Enviada para análise para ser marcada no mapa.")
+    if botão_submit:
+        foto_url = None
+        if foto is not None:
+                file_name = f"{input_name}_{foto.name}"
+                supabase.storage.from_("Fotos_das_arvores").upload(file_name, foto.getbuffer(),{"upsert": True})
+                foto_url = supabase.storage.from_("Fotos_das_arvores").get_public_url(file_name)
+        data = {
+            "nome": input_name,
+            "email": input_email,
+            "telefone": input_telefone,
+            "altura": input_altura,
+            "diametro": input_diametro,
+            "caracteristicas": input_caracteristicas,
+            "coordenadas": input_coordenadas,
+            "foto": foto_url}
+        try:
+            response = supabase.from_("arvores_cadastradas").insert(data).execute()
+            st.success("Árvore cadastrada com sucesso! Enviada para análise e marcada no mapa.")
+            st.write("Retorno do Supabase:", response)
+        except Exception as e:
+            st.error(f"Erro ao cadastrar árvore: {e}")
 
 elif pagina == "Calculo de biomasssa de carbono":
     num_1= st.number_input(label="Digite o diametro da árvore", format="%0f")
