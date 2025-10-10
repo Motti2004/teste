@@ -9,7 +9,9 @@ for _, row in df.iterrows():
     imagens_html = "".join([f'<img src="{img.strip()}" width="200"><br>' for img in imagens if img.strip()])
     folium.Marker(
             location=[row["latitude"], row["longitude"]],
-            popup=(f"<b>{row['genus']}</b><br>"
+            popup=(f"<b>{row['id']}</b><br>"
+                   f"<b>{row['vernacular']}</b><br>"
+                   f"<b>{row['genus']}</b><br>"
                    f"<b>{row['family']}</b><br>"
                    f"<b>{row['notes']}</b><br>"
                    f"<b>{row['altura']}</b><br>"
