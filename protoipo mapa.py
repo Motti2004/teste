@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import folium
 from folium.plugins import LocateControl
 df = pd.read_excel("Dados_teste.xlsx")
@@ -7,7 +8,9 @@ LocateControl().add_to(mapa)
 for _, row in df.iterrows():
     imagens = str(row["imagem"]).split(",")
     imagens_html = "".join([f'<img src="{img.strip()}" width="200"><br>' for img in imagens if img.strip()])
-    icone_personalizado=folium.CustomIcon("icone de jequitibá.png", icon_size=(50,50))
+    icone_path = os.path.join(os.path.dirname(__file__),"icone de jequitibá.png")
+    icone_personalizado=folium.CustomIcon(icone_path, icon_size=(50,50))
+
     folium.Marker(
             location=[row["latitude"], row["longitude"]],
             popup=(f"<b>{row['id']}</b><br>"
