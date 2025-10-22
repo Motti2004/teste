@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1a577199adbabf84c363aec11563020b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1a577199adbabf84c363aec11563020b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1a577199adbabf84c363aec11563020b = L.map(
+                "map_1a577199adbabf84c363aec11563020b",
+                {
+                    center: [-23.546761091636284, -46.651802547369144],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e31155cff24176dc74a7da86ffe8626a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e31155cff24176dc74a7da86ffe8626a.addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var locate_control_f0abf979d5ee28c9d4799eb27612aa61 = L.control.locate(
+                {}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+            
+        
+    
+            var marker_79ebcb87fca5214671f9a580e2af3b2b = L.marker(
+                [-23.5458992, -46.6517915],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_306b6215e3ad6cad38f5964f33272724 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_728dce609f4e16a572e9b1e4674ed9c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_149f7aee23ad22485141b3986a40dca4 = $(`<div id="html_149f7aee23ad22485141b3986a40dca4" style="width: 100.0%; height: 100.0%;"><b>HM01</b><br><b>Mangueira</b><br><b>Mangi fera</b><br><b>ANACARDIACEAE</b><br><b>Flor branca com aroma, 5m.</b><br><b>6,72m</b><br><b>34,22cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2657" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/0VfhgD8S/Whats-App-Image-2025-10-09-at-20-19-16.jpg" width="200"><br><img src="https://i.ibb.co/CKXX6mMc/Whats-App-Image-2025-10-09-at-20-19-16-1.jpg" width="200"><br></div>`)[0];
+                popup_728dce609f4e16a572e9b1e4674ed9c4.setContent(html_149f7aee23ad22485141b3986a40dca4);
+            
+        
+
+        marker_79ebcb87fca5214671f9a580e2af3b2b.bindPopup(popup_728dce609f4e16a572e9b1e4674ed9c4)
+        ;
+
+        
+    
+    
+                marker_79ebcb87fca5214671f9a580e2af3b2b.setIcon(icon_306b6215e3ad6cad38f5964f33272724);
+            
+    
+            var marker_ea1b60980fae09b58e68f106b4d5f2e9 = L.marker(
+                [-23.5472974, -46.6520875],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_d65d70f5b4b06759cd20dca50a4584b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfdb2aeaa1f21d421aec76231d5afccc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d972d77771cb363374367647d946e119 = $(`<div id="html_d972d77771cb363374367647d946e119" style="width: 100.0%; height: 100.0%;"><b>HM02</b><br><b>Planta do Mickey</b><br><b>Ochna</b><br><b>OCHNACEAE</b><br><b>Flor amarela, com frutas verdes imaturas, 1.80m.</b><br><b>5m</b><br><b>7,64cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2658" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/wFD14G4c/Whats-App-Image-2025-10-10-at-12-46-09-1.jpg" width="200"><br><img src="https://i.ibb.co/PGstcxs4/Whats-App-Image-2025-10-10-at-12-46-09.jpg" width="200"><br></div>`)[0];
+                popup_bfdb2aeaa1f21d421aec76231d5afccc.setContent(html_d972d77771cb363374367647d946e119);
+            
+        
+
+        marker_ea1b60980fae09b58e68f106b4d5f2e9.bindPopup(popup_bfdb2aeaa1f21d421aec76231d5afccc)
+        ;
+
+        
+    
+    
+                marker_ea1b60980fae09b58e68f106b4d5f2e9.setIcon(icon_d65d70f5b4b06759cd20dca50a4584b0);
+            
+    
+            var marker_417a7089f2fa73a481862fb7d7d548bc = L.marker(
+                [-23.5478857, -46.6505966],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_8193a434e989bc5c29e5c1926ff798aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d14fcec54a9fc106e96cf3cfbef7dc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d48dc8ea369da82edefbfd6accf04ef = $(`<div id="html_2d48dc8ea369da82edefbfd6accf04ef" style="width: 100.0%; height: 100.0%;"><b>HM03</b><br><b>Cheflera</b><br><b>Schefflera</b><br><b>ARALIACEAE</b><br><b>Presença de inflorescências vermelhas, 2,3m.</b><br><b>22,09m</b><br><b>45,51cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2662" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/5hCrWvYF/Whats-App-Image-2025-10-10-at-13-31-25.jpg" width="200"><br><img src="https://i.ibb.co/fzG1HH3k/Whats-App-Image-2025-10-10-at-13-31-23.jpg" width="200"><br></div>`)[0];
+                popup_6d14fcec54a9fc106e96cf3cfbef7dc3.setContent(html_2d48dc8ea369da82edefbfd6accf04ef);
+            
+        
+
+        marker_417a7089f2fa73a481862fb7d7d548bc.bindPopup(popup_6d14fcec54a9fc106e96cf3cfbef7dc3)
+        ;
+
+        
+    
+    
+                marker_417a7089f2fa73a481862fb7d7d548bc.setIcon(icon_8193a434e989bc5c29e5c1926ff798aa);
+            
+    
+            var marker_f9db97c82b8c2a4686b9ba594c70c9a3 = L.marker(
+                [-23.5469234, -46.6516741],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_045220a546fdefce4476df12cb75c5c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa300ee05ffcabfb4ce82dd9af994da6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a28edadd2a75d742b97e5e721018b9b = $(`<div id="html_7a28edadd2a75d742b97e5e721018b9b" style="width: 100.0%; height: 100.0%;"><b>HM04</b><br><b>Ipe</b><br><b>Tabebuia</b><br><b>BIGNONIACEAE</b><br><b>Com frutos em forma de vagem, 6m.</b><br><b>18,19m</b><br><b>52,36cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2667" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/7xFytyMV/Whats-App-Image-2025-10-10-at-13-14-12.jpg" width="200"><br><img src="https://i.ibb.co/M5fVwJ7b/Whats-App-Image-2025-10-10-at-13-14-12-1.jp" width="200"><br></div>`)[0];
+                popup_aa300ee05ffcabfb4ce82dd9af994da6.setContent(html_7a28edadd2a75d742b97e5e721018b9b);
+            
+        
+
+        marker_f9db97c82b8c2a4686b9ba594c70c9a3.bindPopup(popup_aa300ee05ffcabfb4ce82dd9af994da6)
+        ;
+
+        
+    
+    
+                marker_f9db97c82b8c2a4686b9ba594c70c9a3.setIcon(icon_045220a546fdefce4476df12cb75c5c7);
+            
+    
+            var marker_329775ac9193026ce8c231eae41155b0 = L.marker(
+                [-23.5479002, -46.652636],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_ba4753d823b6432fcbacc1dcafe12532 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70ec621b73c78fc7a4e7db791cde87d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6aae3b235cb0f942a741d5b52174fe45 = $(`<div id="html_6aae3b235cb0f942a741d5b52174fe45" style="width: 100.0%; height: 100.0%;"><b>HM05</b><br><b>Amoreira</b><br><b>Morus</b><br><b>MORACEAE</b><br><b>Com frutos maduros, vermelho-escuro, quase vinho e imaturos, verdes, suculentos, 3m.</b><br><b>10,61m</b><br><b>23,87cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2681" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/pvdnf7qw/Whats-App-Image-2025-10-10-at-14-20-35.jpg" width="200"><br><img src="https://i.ibb.co/RGdjVyVW/Whats-App-Image-2025-10-10-at-14-20-35-1.jpg" width="200"><br></div>`)[0];
+                popup_70ec621b73c78fc7a4e7db791cde87d5.setContent(html_6aae3b235cb0f942a741d5b52174fe45);
+            
+        
+
+        marker_329775ac9193026ce8c231eae41155b0.bindPopup(popup_70ec621b73c78fc7a4e7db791cde87d5)
+        ;
+
+        
+    
+    
+                marker_329775ac9193026ce8c231eae41155b0.setIcon(icon_ba4753d823b6432fcbacc1dcafe12532);
+            
+    
+            var marker_92990caf78247f5c5ada4a4fb78c6fa9 = L.marker(
+                [-23.5479844, -46.6525733],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a58578e060b852400efdc11679cd47b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83080424d00c319e65ab5549758afb44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd4b15000d67be2844e56811277e52f5 = $(`<div id="html_cd4b15000d67be2844e56811277e52f5" style="width: 100.0%; height: 100.0%;"><b>HM06</b><br><b>Tuia oriental</b><br><b>Platycladus</b><br><b>CUPRESSACEAE</b><br><b>Árvore 2m.</b><br><b>14,34m</b><br><b>47,42cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2682" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/p6TzyPr7/Whats-App-Image-2025-10-10-at-14-30-23.jpg" width="200"><br><img src="https://i.ibb.co/WWdsBtkx/Whats-App-Image-2025-10-10-at-14-30-24.jpg" width="200"><br></div>`)[0];
+                popup_83080424d00c319e65ab5549758afb44.setContent(html_cd4b15000d67be2844e56811277e52f5);
+            
+        
+
+        marker_92990caf78247f5c5ada4a4fb78c6fa9.bindPopup(popup_83080424d00c319e65ab5549758afb44)
+        ;
+
+        
+    
+    
+                marker_92990caf78247f5c5ada4a4fb78c6fa9.setIcon(icon_a58578e060b852400efdc11679cd47b8);
+            
+    
+            var marker_dfdec29192d66af901ed955877c4b4b3 = L.marker(
+                [-23.5482745, -46.6523749],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_8810e2b0ed770e113f7c9c662c997064 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6dcd31f2a4323f252a690fc7d0f7ef2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab14aa97f032d6465838e540a08bb5c2 = $(`<div id="html_ab14aa97f032d6465838e540a08bb5c2" style="width: 100.0%; height: 100.0%;"><b>HM07</b><br><b>Pata de vaca</b><br><b>Bauhinia</b><br><b>FABACEAE</b><br><b>Presença de frutos e resquícios de flores, 4m.</b><br><b>12,29m</b><br><b>55,70cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2687" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/RTzh8G7J/Whats-App-Image-2025-10-14-at-13-40-37.jpg" width="200"><br><img src="https://i.ibb.co/GQs2TSZ9/Whats-App-Image-2025-10-14-at-13-40-38.jpg" width="200"><br></div>`)[0];
+                popup_6dcd31f2a4323f252a690fc7d0f7ef2c.setContent(html_ab14aa97f032d6465838e540a08bb5c2);
+            
+        
+
+        marker_dfdec29192d66af901ed955877c4b4b3.bindPopup(popup_6dcd31f2a4323f252a690fc7d0f7ef2c)
+        ;
+
+        
+    
+    
+                marker_dfdec29192d66af901ed955877c4b4b3.setIcon(icon_8810e2b0ed770e113f7c9c662c997064);
+            
+    
+            var marker_894e42a7a61ada8676984f2f11945506 = L.marker(
+                [-23.5478335, -46.6519497],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_34d797a39b96decd3f428d97617ba9c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6570c6a970f138026e51ea26f0b6a4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03a65ac8752c379137419217576b084a = $(`<div id="html_03a65ac8752c379137419217576b084a" style="width: 100.0%; height: 100.0%;"><b>HM08</b><br><b>Manacá da serra</b><br><b>Tibouchina</b><br><b>MELASTOMATACEAE</b><br><b>nan</b><br><b>4,72m</b><br><b>26,41cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2695" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/kVKPdBMT/Whats-App-Image-2025-10-14-at-13-45-26.jpg" width="200"><br><img src="https://i.ibb.co/9kk8ypRp/Whats-App-Image-2025-10-14-at-13-45-22.jpg" width="200"><br></div>`)[0];
+                popup_c6570c6a970f138026e51ea26f0b6a4a.setContent(html_03a65ac8752c379137419217576b084a);
+            
+        
+
+        marker_894e42a7a61ada8676984f2f11945506.bindPopup(popup_c6570c6a970f138026e51ea26f0b6a4a)
+        ;
+
+        
+    
+    
+                marker_894e42a7a61ada8676984f2f11945506.setIcon(icon_34d797a39b96decd3f428d97617ba9c2);
+            
+    
+            var marker_e5cc9a2b932b95f96d7d72eeaac9d267 = L.marker(
+                [-23.5456564, -46.652221],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a4829af01afa4fff2537b72ba5df3d0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d1d7488fd0eabddd2b1d59b19284799 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_342a807bf2a47c4c95f722d6034c3ae0 = $(`<div id="html_342a807bf2a47c4c95f722d6034c3ae0" style="width: 100.0%; height: 100.0%;"><b>HM09</b><br><b>Jamelão</b><br><b>Syzygium</b><br><b>MYRTACEAE</b><br><b>Flores brancas e/ou amareladas com longas e rumerosas, com estames, 10m.</b><br><b>8,4m</b><br><b>25,30cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2697" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/MDxSKv1J/Whats-App-Image-2025-10-09-at-20-18-57.jpg" width="200"><br><img src="https://i.ibb.co/0ycWvcWG/Whats-App-Image-2025-10-09-at-20-18-57-1.jpg" width="200"><br></div>`)[0];
+                popup_1d1d7488fd0eabddd2b1d59b19284799.setContent(html_342a807bf2a47c4c95f722d6034c3ae0);
+            
+        
+
+        marker_e5cc9a2b932b95f96d7d72eeaac9d267.bindPopup(popup_1d1d7488fd0eabddd2b1d59b19284799)
+        ;
+
+        
+    
+    
+                marker_e5cc9a2b932b95f96d7d72eeaac9d267.setIcon(icon_a4829af01afa4fff2537b72ba5df3d0f);
+            
+    
+            var marker_6e8beec39bfa300a82a434dbfbe98679 = L.marker(
+                [-23.546384, -46.6516691],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_4398b6cae7718f284e5ec01d3b14d953 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa24fd49c1d223e16fdeacffe9799144 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25b84295f966b82394fddba3d854dcef = $(`<div id="html_25b84295f966b82394fddba3d854dcef" style="width: 100.0%; height: 100.0%;"><b>HM10</b><br><b>Pitangueira</b><br><b>Eugenia</b><br><b>MYRTACEAE</b><br><b>Aromatica, frutos vermelhos= e alaranjados em forma de drupa globosa e sulcada, 5m.</b><br><b>8,36m</b><br><b>17,50cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2698" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/8kNVn17/Whats-App-Image-2025-10-10-at-14-03-34.jpg" width="200"><br><img src="https://i.ibb.co/Lj7VGFX/Whats-App-Image-2025-10-10-at-14-03-34-1.jpg" width="200"><br></div>`)[0];
+                popup_aa24fd49c1d223e16fdeacffe9799144.setContent(html_25b84295f966b82394fddba3d854dcef);
+            
+        
+
+        marker_6e8beec39bfa300a82a434dbfbe98679.bindPopup(popup_aa24fd49c1d223e16fdeacffe9799144)
+        ;
+
+        
+    
+    
+                marker_6e8beec39bfa300a82a434dbfbe98679.setIcon(icon_4398b6cae7718f284e5ec01d3b14d953);
+            
+    
+            var marker_748bbadb4455ffa8012fc886c735f4d5 = L.marker(
+                [-23.545833333333334, -46.651944444444446],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_14f92244b1fa499b52d809fca2e3c95d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c95714dd0f017891316ecca76f014ffc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc357dc663925d974296a9b4df9ac9d7 = $(`<div id="html_fc357dc663925d974296a9b4df9ac9d7" style="width: 100.0%; height: 100.0%;"><b>HM11</b><br><b>Pau d'água</b><br><b>Dracaena</b><br><b>ASPARAGACEAE</b><br><b>nan</b><br><b>0,5m</b><br><b>3,5cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2701" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/PzDnf07x/Whats-App-Image-2025-10-09-at-13-59-19.jpg" width="200"><br></div>`)[0];
+                popup_c95714dd0f017891316ecca76f014ffc.setContent(html_fc357dc663925d974296a9b4df9ac9d7);
+            
+        
+
+        marker_748bbadb4455ffa8012fc886c735f4d5.bindPopup(popup_c95714dd0f017891316ecca76f014ffc)
+        ;
+
+        
+    
+    
+                marker_748bbadb4455ffa8012fc886c735f4d5.setIcon(icon_14f92244b1fa499b52d809fca2e3c95d);
+            
+    
+            var marker_62a985fecb70eb65c965769b25d1d0ab = L.marker(
+                [-23.5478202, -46.6506495],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_5eb4c5940fc1cfc6ecb52e40f1c6769c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_099b21b2b86758500ffa82d02d77a9cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21c96aadd4ee389d2ee0863ab633023b = $(`<div id="html_21c96aadd4ee389d2ee0863ab633023b" style="width: 100.0%; height: 100.0%;"><b>HM12</b><br><b>Uva do japão</b><br><b>Hovenia</b><br><b>RHAMNACEAE</b><br><b>Presença de flores numeroas, pequenas, perfumadas, de cor branca, esverdeada ou amarelada.</b><br><b>15, 26m</b><br><b>55,70cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2719" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/xqNYftf1/Whats-App-Image-2025-10-10-at-13-51-32.jpg" width="200"><br></div>`)[0];
+                popup_099b21b2b86758500ffa82d02d77a9cb.setContent(html_21c96aadd4ee389d2ee0863ab633023b);
+            
+        
+
+        marker_62a985fecb70eb65c965769b25d1d0ab.bindPopup(popup_099b21b2b86758500ffa82d02d77a9cb)
+        ;
+
+        
+    
+    
+                marker_62a985fecb70eb65c965769b25d1d0ab.setIcon(icon_5eb4c5940fc1cfc6ecb52e40f1c6769c);
+            
+    
+            var marker_f74d931b6b68e57e1ea5fb4532721da0 = L.marker(
+                [-23.546111111111113, -46.652499999999996],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_7d768c6c4cd0ea5eda175d1528e45b62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78a1ac8db27a8bd11a125737ace58ed2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1855eb81e138c46452528c3eca2db4c = $(`<div id="html_c1855eb81e138c46452528c3eca2db4c" style="width: 100.0%; height: 100.0%;"><b>HM13</b><br><b>Amendoin bravo</b><br><b>Pterogyne</b><br><b>FABACEAE</b><br><b>Presença de frutos lenhosos e alados, com forma de sâmara (secos, indeiscentes).</b><br><b>16,8m</b><br><b>63,82cm</b><br><a href="https://mack.jbrj.gov.br/v2/ficha.php?chtestemunho=2727" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Cs1dzFYX/Whats-App-Image-2025-10-09-at-14-23-40.jpg" width="200"><br></div>`)[0];
+                popup_78a1ac8db27a8bd11a125737ace58ed2.setContent(html_c1855eb81e138c46452528c3eca2db4c);
+            
+        
+
+        marker_f74d931b6b68e57e1ea5fb4532721da0.bindPopup(popup_78a1ac8db27a8bd11a125737ace58ed2)
+        ;
+
+        
+    
+    
+                marker_f74d931b6b68e57e1ea5fb4532721da0.setIcon(icon_7d768c6c4cd0ea5eda175d1528e45b62);
+            
+    
+            var marker_34b0b747422b46184942e6fe13454fc2 = L.marker(
+                [-23.5463289, -46.6518716],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_5a0181f45ea86ed8cfdf739ad41d9a6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e8756d9621984fa89b106afe48f016d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e6f0cd49f0585b36a1dd01af4057a40 = $(`<div id="html_0e6f0cd49f0585b36a1dd01af4057a40" style="width: 100.0%; height: 100.0%;"><b>HM14</b><br><b>Pitangueria</b><br><b>Eugenia</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>11,05m</b><br><b>26,10cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/V6vsr6T/Whats-App-Image-2025-10-15-at-09-43-16.jpg" width="200"><br></div>`)[0];
+                popup_6e8756d9621984fa89b106afe48f016d.setContent(html_0e6f0cd49f0585b36a1dd01af4057a40);
+            
+        
+
+        marker_34b0b747422b46184942e6fe13454fc2.bindPopup(popup_6e8756d9621984fa89b106afe48f016d)
+        ;
+
+        
+    
+    
+                marker_34b0b747422b46184942e6fe13454fc2.setIcon(icon_5a0181f45ea86ed8cfdf739ad41d9a6a);
+            
+    
+            var marker_423466c7c348bc6077cc8f52bfea9c90 = L.marker(
+                [-23.5463775, -46.6519115],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_5df7bf98dd2bc505c403622433648a75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7323624856ad7a7dd113dffeeb4f0da9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff1b2d96dfed7648e06d54fc5bec2437 = $(`<div id="html_ff1b2d96dfed7648e06d54fc5bec2437" style="width: 100.0%; height: 100.0%;"><b>HM15</b><br><b>Jabuticabeira</b><br><b>Plinia</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>6,35m</b><br><b>23,23cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/NgM3qdB7/Whats-App-Image-2025-10-15-at-09-53-27.jpg" width="200"><br><img src="https://i.ibb.co/LDV9ZG8x/Whats-App-Image-2025-10-15-at-09-53-27-1.jpg" width="200"><br></div>`)[0];
+                popup_7323624856ad7a7dd113dffeeb4f0da9.setContent(html_ff1b2d96dfed7648e06d54fc5bec2437);
+            
+        
+
+        marker_423466c7c348bc6077cc8f52bfea9c90.bindPopup(popup_7323624856ad7a7dd113dffeeb4f0da9)
+        ;
+
+        
+    
+    
+                marker_423466c7c348bc6077cc8f52bfea9c90.setIcon(icon_5df7bf98dd2bc505c403622433648a75);
+            
+    
+            var marker_de3f48738ad9c616f5506dfe8b59e3f1 = L.marker(
+                [-23.546368, -46.651849],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_9ed7a82d44b9f18ebc40bd5907165816 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce70751622d9bb1b936b2b637823d4a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb4a404fb4384664bf70ec40688f3553 = $(`<div id="html_cb4a404fb4384664bf70ec40688f3553" style="width: 100.0%; height: 100.0%;"><b>HM16</b><br><b>Guapuruvu</b><br><b>Schizolobium</b><br><b>FABACEAE</b><br><b>nan</b><br><b>2,7m</b><br><b>7,32cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/5hVytvcN/Whats-App-Image-2025-10-15-at-10-19-56.jpg" width="200"><br><img src="https://i.ibb.co/hJGm9g15/Whats-App-Image-2025-10-15-at-10-19-56-2.jpg" width="200"><br></div>`)[0];
+                popup_ce70751622d9bb1b936b2b637823d4a0.setContent(html_cb4a404fb4384664bf70ec40688f3553);
+            
+        
+
+        marker_de3f48738ad9c616f5506dfe8b59e3f1.bindPopup(popup_ce70751622d9bb1b936b2b637823d4a0)
+        ;
+
+        
+    
+    
+                marker_de3f48738ad9c616f5506dfe8b59e3f1.setIcon(icon_9ed7a82d44b9f18ebc40bd5907165816);
+            
+    
+            var marker_39f3e1bcf170f2fb26cf2b965818b337 = L.marker(
+                [-23.546334, -46.651778],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_bab73c05b5ca5d65852c5ba50864d66b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59c1655d87c370421ae08b0409d4df34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e0616eea84f4afd45c8b8d15ff6d44e = $(`<div id="html_8e0616eea84f4afd45c8b8d15ff6d44e" style="width: 100.0%; height: 100.0%;"><b>HM17</b><br><b>Mamoeiro</b><br><b>Carica</b><br><b>CARICACEAE</b><br><b>nan</b><br><b>2m</b><br><b>5,72cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/DP5k1wpY/Whats-App-Image-2025-10-15-at-10-29-15.jpg" width="200"><br><img src="https://i.ibb.co/DPj32kxw/Whats-App-Image-2025-10-15-at-10-29-15-1.jpg" width="200"><br></div>`)[0];
+                popup_59c1655d87c370421ae08b0409d4df34.setContent(html_8e0616eea84f4afd45c8b8d15ff6d44e);
+            
+        
+
+        marker_39f3e1bcf170f2fb26cf2b965818b337.bindPopup(popup_59c1655d87c370421ae08b0409d4df34)
+        ;
+
+        
+    
+    
+                marker_39f3e1bcf170f2fb26cf2b965818b337.setIcon(icon_bab73c05b5ca5d65852c5ba50864d66b);
+            
+    
+            var marker_61655718ca7c9e74c30613934692aeb4 = L.marker(
+                [-23.546406, -46.651951],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_ca9b3d7e015587679f36d4daec7d90ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dac3d76d2d883e762653446dc230f9d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_895fb47760aa9dd5c288fed50fecf2d3 = $(`<div id="html_895fb47760aa9dd5c288fed50fecf2d3" style="width: 100.0%; height: 100.0%;"><b>HM18</b><br><b>Camelia Japonica</b><br><b>Camellia</b><br><b>THEACEAE</b><br><b>nan</b><br><b>2m</b><br><b>11,45cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Ps4sjj3n/Whats-App-Image-2025-10-15-at-10-35-40.jpg" width="200"><br><img src="https://i.ibb.co/7td9VXD1/Whats-App-Image-2025-10-15-at-10-35-40-1.jpg" width="200"><br></div>`)[0];
+                popup_dac3d76d2d883e762653446dc230f9d0.setContent(html_895fb47760aa9dd5c288fed50fecf2d3);
+            
+        
+
+        marker_61655718ca7c9e74c30613934692aeb4.bindPopup(popup_dac3d76d2d883e762653446dc230f9d0)
+        ;
+
+        
+    
+    
+                marker_61655718ca7c9e74c30613934692aeb4.setIcon(icon_ca9b3d7e015587679f36d4daec7d90ad);
+            
+    
+            var marker_d1893f8f3008db6ae5f754fa7609a829 = L.marker(
+                [-23.546435, -46.651951],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a1b8914d306c2c299ed3fbac25ad324e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2df215b2227ad423d1b5e22f0108cf77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_931368fb41f5cd36abaef1aac22730d3 = $(`<div id="html_931368fb41f5cd36abaef1aac22730d3" style="width: 100.0%; height: 100.0%;"><b>HM19</b><br><b>Ipe</b><br><b>Tabebuia</b><br><b>BIGNONIACEAE</b><br><b>nan</b><br><b>14m</b><br><b>91,99cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/67jcXK49/Whats-App-Image-2025-10-15-at-19-56-27.jpg" width="200"><br></div>`)[0];
+                popup_2df215b2227ad423d1b5e22f0108cf77.setContent(html_931368fb41f5cd36abaef1aac22730d3);
+            
+        
+
+        marker_d1893f8f3008db6ae5f754fa7609a829.bindPopup(popup_2df215b2227ad423d1b5e22f0108cf77)
+        ;
+
+        
+    
+    
+                marker_d1893f8f3008db6ae5f754fa7609a829.setIcon(icon_a1b8914d306c2c299ed3fbac25ad324e);
+            
+    
+            var marker_af5d4663dc2f50af3f6e60ce9de3ee3c = L.marker(
+                [-23.5463422, -46.6521861],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_6edd00632e38590def71e0cc4217094e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1711ebd06d05d2444748bee226fd6bad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0578d11df25ce484c26cb0b3457ddca1 = $(`<div id="html_0578d11df25ce484c26cb0b3457ddca1" style="width: 100.0%; height: 100.0%;"><b>HM20</b><br><b>Sibipiruna</b><br><b>Caesalpinia</b><br><b>FABACEAE</b><br><b>nan</b><br><b>12m</b><br><b>72,57cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/WNnKjbxr/Whats-App-Image-2025-10-15-at-11-05-00-1.jpg" width="200"><br><img src="https://i.ibb.co/s9Xmt7P0/Whats-App-Image-2025-10-15-at-11-05-00.jpg" width="200"><br></div>`)[0];
+                popup_1711ebd06d05d2444748bee226fd6bad.setContent(html_0578d11df25ce484c26cb0b3457ddca1);
+            
+        
+
+        marker_af5d4663dc2f50af3f6e60ce9de3ee3c.bindPopup(popup_1711ebd06d05d2444748bee226fd6bad)
+        ;
+
+        
+    
+    
+                marker_af5d4663dc2f50af3f6e60ce9de3ee3c.setIcon(icon_6edd00632e38590def71e0cc4217094e);
+            
+    
+            var marker_368cac4a43246e641042c4096a4d87d1 = L.marker(
+                [-23.545967, -46.652303],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_c7a796576d6de0eef5574270330e52bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f9697848b291ff8feefec7779b5c6a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a0a6f7acb88059fbbd4654e5456e82b = $(`<div id="html_8a0a6f7acb88059fbbd4654e5456e82b" style="width: 100.0%; height: 100.0%;"><b>HM21</b><br><b>Camelia Japonica</b><br><b>Camellia</b><br><b>THEACEAE</b><br><b>nan</b><br><b>4m</b><br><b>14,80cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Nnppn86n/Whats-App-Image-2025-10-15-at-11-22-17-1.jpg" width="200"><br><img src="https://i.ibb.co/5QvMdBc/Whats-App-Image-2025-10-15-at-11-22-17.jpg" width="200"><br></div>`)[0];
+                popup_2f9697848b291ff8feefec7779b5c6a4.setContent(html_8a0a6f7acb88059fbbd4654e5456e82b);
+            
+        
+
+        marker_368cac4a43246e641042c4096a4d87d1.bindPopup(popup_2f9697848b291ff8feefec7779b5c6a4)
+        ;
+
+        
+    
+    
+                marker_368cac4a43246e641042c4096a4d87d1.setIcon(icon_c7a796576d6de0eef5574270330e52bf);
+            
+    
+            var marker_887b5e5ba7401fe38bad0358ce305cbf = L.marker(
+                [-23.5477751, -46.6504926],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_9f9da301b86eafd2ed68ab40561c57ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6be0ab2f2cce6bb4306111254701741d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c83fc0d4e5006327bdf58a6e8dba6cf8 = $(`<div id="html_c83fc0d4e5006327bdf58a6e8dba6cf8" style="width: 100.0%; height: 100.0%;"><b>HM22</b><br><b>Pata de vaca</b><br><b>Bauhinia</b><br><b>FABACEAE</b><br><b>nan</b><br><b>4m</b><br><b>30,08cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/5p3dvP5/Whats-App-Image-2025-10-15-at-13-34-46-1.jpg" width="200"><br><img src="https://i.ibb.co/hF6N15Lz/Whats-App-Image-2025-10-15-at-13-34-46.jpg" width="200"><br></div>`)[0];
+                popup_6be0ab2f2cce6bb4306111254701741d.setContent(html_c83fc0d4e5006327bdf58a6e8dba6cf8);
+            
+        
+
+        marker_887b5e5ba7401fe38bad0358ce305cbf.bindPopup(popup_6be0ab2f2cce6bb4306111254701741d)
+        ;
+
+        
+    
+    
+                marker_887b5e5ba7401fe38bad0358ce305cbf.setIcon(icon_9f9da301b86eafd2ed68ab40561c57ab);
+            
+    
+            var marker_66de8096d06f6b8bcc3dc9a39e253fee = L.marker(
+                [-23.547837, -46.651165],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_34ce6d674a2c7eaf258fe7c61c613c50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b994882d00116fb57d84119652090c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de254c557e4e3a87592af902b5b10281 = $(`<div id="html_de254c557e4e3a87592af902b5b10281" style="width: 100.0%; height: 100.0%;"><b>HM23</b><br><b>Jabuticabeira</b><br><b>Plinia</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>1,80m</b><br><b>14,96cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/JWSG55HT/Whats-App-Image-2025-10-15-at-20-01-17.jpg" width="200"><br><img src="https://i.ibb.co/9m57C88T/Whats-App-Image-2025-10-15-at-13-41-49.jpg" width="200"><br></div>`)[0];
+                popup_4b994882d00116fb57d84119652090c9.setContent(html_de254c557e4e3a87592af902b5b10281);
+            
+        
+
+        marker_66de8096d06f6b8bcc3dc9a39e253fee.bindPopup(popup_4b994882d00116fb57d84119652090c9)
+        ;
+
+        
+    
+    
+                marker_66de8096d06f6b8bcc3dc9a39e253fee.setIcon(icon_34ce6d674a2c7eaf258fe7c61c613c50);
+            
+    
+            var marker_313fde852d084b8d83cfcb01348e8798 = L.marker(
+                [-23.5468109, -46.6515668],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_eee345792759bd0983a8d1949325eb56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23c6068116ddea1065f0d870d6718053 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34ea452598dcca3859a562ec6735a33c = $(`<div id="html_34ea452598dcca3859a562ec6735a33c" style="width: 100.0%; height: 100.0%;"><b>HM24</b><br><b>Ipe</b><br><b>Tabebuia</b><br><b>BIGNONIACEAE</b><br><b>nan</b><br><b>19,31m</b><br><b>26,73cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/MDWf2r3K/Whats-App-Image-2025-10-15-at-13-46-20.jpg" width="200"><br><img src="https://i.ibb.co/sdcFKTR1/Whats-App-Image-2025-10-15-at-13-51-14.jpg" width="200"><br></div>`)[0];
+                popup_23c6068116ddea1065f0d870d6718053.setContent(html_34ea452598dcca3859a562ec6735a33c);
+            
+        
+
+        marker_313fde852d084b8d83cfcb01348e8798.bindPopup(popup_23c6068116ddea1065f0d870d6718053)
+        ;
+
+        
+    
+    
+                marker_313fde852d084b8d83cfcb01348e8798.setIcon(icon_eee345792759bd0983a8d1949325eb56);
+            
+    
+            var marker_60dd53a245c334a8172f4e37bd5f4c57 = L.marker(
+                [-23.546756, -46.651494],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_d0630af83f5358571b36b4b47dff2cbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1926b572746146476b5accda931cf058 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b24e55b064a4e0722758e6737755b50d = $(`<div id="html_b24e55b064a4e0722758e6737755b50d" style="width: 100.0%; height: 100.0%;"><b>HM25</b><br><b>Ipe</b><br><b>Tabebuia</b><br><b>BIGNONIACEAE</b><br><b>nan</b><br><b>22m</b><br><b>79,57cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/5ZvxwtL/Whats-App-Image-2025-10-16-at-13-25-02.jpg" width="200"><br></div>`)[0];
+                popup_1926b572746146476b5accda931cf058.setContent(html_b24e55b064a4e0722758e6737755b50d);
+            
+        
+
+        marker_60dd53a245c334a8172f4e37bd5f4c57.bindPopup(popup_1926b572746146476b5accda931cf058)
+        ;
+
+        
+    
+    
+                marker_60dd53a245c334a8172f4e37bd5f4c57.setIcon(icon_d0630af83f5358571b36b4b47dff2cbb);
+            
+    
+            var marker_0cd167ec000135e1539c146c237e2e55 = L.marker(
+                [-23.547222, -46.652027],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_69510fed359890c0466a05c4393897ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb6d4ec7c5468431d249966774669854 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_561d44e383fb01f23472a52edbea206b = $(`<div id="html_561d44e383fb01f23472a52edbea206b" style="width: 100.0%; height: 100.0%;"><b>HM26</b><br><b>Alfeneiro</b><br><b>Ligustrum</b><br><b>OLEACEAE</b><br><b>nan</b><br><b>5,20m</b><br><b>25,14cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/20WJNjjP/Whats-App-Image-2025-10-16-at-13-38-45.jpg" width="200"><br></div>`)[0];
+                popup_bb6d4ec7c5468431d249966774669854.setContent(html_561d44e383fb01f23472a52edbea206b);
+            
+        
+
+        marker_0cd167ec000135e1539c146c237e2e55.bindPopup(popup_bb6d4ec7c5468431d249966774669854)
+        ;
+
+        
+    
+    
+                marker_0cd167ec000135e1539c146c237e2e55.setIcon(icon_69510fed359890c0466a05c4393897ab);
+            
+    
+            var marker_926968ac466abaca1165d6866fc179d0 = L.marker(
+                [-23.5477184, -46.651985],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_e923721919f0f4df86a7a61a717014db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5854f8513068e84b9eea7165899b9cf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74bea856a5167625dfb64e2d1118cb4d = $(`<div id="html_74bea856a5167625dfb64e2d1118cb4d" style="width: 100.0%; height: 100.0%;"><b>HM27</b><br><b>Alfeneiro</b><br><b>Ligustrum</b><br><b>OLEACEAE</b><br><b>nan</b><br><b>4,20m</b><br><b>12,89cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/8LYhTFX0/Whats-App-Image-2025-10-16-at-13-42-34.jpg" width="200"><br></div>`)[0];
+                popup_5854f8513068e84b9eea7165899b9cf9.setContent(html_74bea856a5167625dfb64e2d1118cb4d);
+            
+        
+
+        marker_926968ac466abaca1165d6866fc179d0.bindPopup(popup_5854f8513068e84b9eea7165899b9cf9)
+        ;
+
+        
+    
+    
+                marker_926968ac466abaca1165d6866fc179d0.setIcon(icon_e923721919f0f4df86a7a61a717014db);
+            
+    
+            var marker_9773f0809641cf2e975e982aeb100aa5 = L.marker(
+                [-23.547237, -46.652042],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_d357fe8c33478d85393260228e6c3d96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b161bc9b42e4f6feaf4803c728382e33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3235261f42506354bdf178a53aa24e6 = $(`<div id="html_b3235261f42506354bdf178a53aa24e6" style="width: 100.0%; height: 100.0%;"><b>HM28</b><br><b>Alfeneiro</b><br><b>Ligustrum</b><br><b>OLEACEAE</b><br><b>nan</b><br><b>8m</b><br><b>35,65cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Qj12Rd8p/Whats-App-Image-2025-10-16-at-13-49-46.jpg" width="200"><br><img src="https://i.ibb.co/7dpSbD90/Whats-App-Image-2025-10-16-at-13-49-47.jpg" width="200"><br></div>`)[0];
+                popup_b161bc9b42e4f6feaf4803c728382e33.setContent(html_b3235261f42506354bdf178a53aa24e6);
+            
+        
+
+        marker_9773f0809641cf2e975e982aeb100aa5.bindPopup(popup_b161bc9b42e4f6feaf4803c728382e33)
+        ;
+
+        
+    
+    
+                marker_9773f0809641cf2e975e982aeb100aa5.setIcon(icon_d357fe8c33478d85393260228e6c3d96);
+            
+    
+            var marker_4ae4a5fcc3a73bad117f3bc6ba58ede7 = L.marker(
+                [-23.547242, -46.652044],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_5f163f319e33309870a1e035cff5802f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ddf0459dcef313a59db5e7f38a014f7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00453bb4f3dbb97eff225cd8b4c9f343 = $(`<div id="html_00453bb4f3dbb97eff225cd8b4c9f343" style="width: 100.0%; height: 100.0%;"><b>HM29</b><br><b>Alfeneiro</b><br><b>Ligustrum</b><br><b>OLEACEAE</b><br><b>nan</b><br><b>10,17m</b><br><b>29,60cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/3bk8yyN/Whats-App-Image-2025-10-16-at-13-54-43.jpg" width="200"><br></div>`)[0];
+                popup_ddf0459dcef313a59db5e7f38a014f7a.setContent(html_00453bb4f3dbb97eff225cd8b4c9f343);
+            
+        
+
+        marker_4ae4a5fcc3a73bad117f3bc6ba58ede7.bindPopup(popup_ddf0459dcef313a59db5e7f38a014f7a)
+        ;
+
+        
+    
+    
+                marker_4ae4a5fcc3a73bad117f3bc6ba58ede7.setIcon(icon_5f163f319e33309870a1e035cff5802f);
+            
+    
+            var marker_723deb6c8bf195318d735983940409bb = L.marker(
+                [-23.547776, -46.650824],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_9ddc16afe84b6b470170feedda4f4d00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99d57113a5337b8da6f7c41753da0d5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa46b80799b04b34fae0815f3afd81d2 = $(`<div id="html_fa46b80799b04b34fae0815f3afd81d2" style="width: 100.0%; height: 100.0%;"><b>HM30</b><br><b>Tamarindeiro</b><br><b>Tamarindus</b><br><b>FABACEAE</b><br><b>nan</b><br><b>9m</b><br><b>41,06cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/dJ5syXjs/Whats-App-Image-2025-10-16-at-14-14-53.jpg" width="200"><br><img src="https://i.ibb.co/xKg85D1M/Whats-App-Image-2025-10-16-at-14-14-53-1.jpg" width="200"><br></div>`)[0];
+                popup_99d57113a5337b8da6f7c41753da0d5f.setContent(html_fa46b80799b04b34fae0815f3afd81d2);
+            
+        
+
+        marker_723deb6c8bf195318d735983940409bb.bindPopup(popup_99d57113a5337b8da6f7c41753da0d5f)
+        ;
+
+        
+    
+    
+                marker_723deb6c8bf195318d735983940409bb.setIcon(icon_9ddc16afe84b6b470170feedda4f4d00);
+            
+    
+            var marker_7d884c18eff1b396d6118825f127150f = L.marker(
+                [-23.547766, -46.650677],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_32b17dd44c5147a37b26deabd054c42a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15ae6ff77679c8d01d6cae875a6182fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d97433df2181ba661cf0ce67fc7c22c1 = $(`<div id="html_d97433df2181ba661cf0ce67fc7c22c1" style="width: 100.0%; height: 100.0%;"><b>HM31</b><br><b>Cheflera</b><br><b>Schefflera</b><br><b>ARALIACEAE</b><br><b>nan</b><br><b>7m</b><br><b>27,37cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Lh0W7gxC/Whats-App-Image-2025-10-16-at-14-22-55.jpg" width="200"><br></div>`)[0];
+                popup_15ae6ff77679c8d01d6cae875a6182fd.setContent(html_d97433df2181ba661cf0ce67fc7c22c1);
+            
+        
+
+        marker_7d884c18eff1b396d6118825f127150f.bindPopup(popup_15ae6ff77679c8d01d6cae875a6182fd)
+        ;
+
+        
+    
+    
+                marker_7d884c18eff1b396d6118825f127150f.setIcon(icon_32b17dd44c5147a37b26deabd054c42a);
+            
+    
+            var marker_9c4510d64041e3173f2a72f32ae1122d = L.marker(
+                [-23.547748, -46.6507],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_3d9e570ba4e20331c678450c2f5fd5a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2e5081abfad5728223f57792a5d8255 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c1f5d2273e55be6b172e8d2b9a7d798 = $(`<div id="html_3c1f5d2273e55be6b172e8d2b9a7d798" style="width: 100.0%; height: 100.0%;"><b>HM32</b><br><b>Cheflera</b><br><b>Schefflera</b><br><b>ARALIACEAE</b><br><b>nan</b><br><b>8m</b><br><b>28,32cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/tMRq8xyC/Whats-App-Image-2025-10-16-at-14-26-10.jpg" width="200"><br><img src="https://i.ibb.co/gFt0wFgt/Whats-App-Image-2025-10-16-at-14-26-10-1.jpg" width="200"><br></div>`)[0];
+                popup_a2e5081abfad5728223f57792a5d8255.setContent(html_3c1f5d2273e55be6b172e8d2b9a7d798);
+            
+        
+
+        marker_9c4510d64041e3173f2a72f32ae1122d.bindPopup(popup_a2e5081abfad5728223f57792a5d8255)
+        ;
+
+        
+    
+    
+                marker_9c4510d64041e3173f2a72f32ae1122d.setIcon(icon_3d9e570ba4e20331c678450c2f5fd5a5);
+            
+    
+            var marker_a93356228f84b05e8902f18e03cd7ab6 = L.marker(
+                [-23.548027, -46.651177],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_07c67531ce21e84186f3949fc376999b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9061bdc7494d8d964dd20f3e36471b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c918eaf54e831070dd87dc8c441da6ce = $(`<div id="html_c918eaf54e831070dd87dc8c441da6ce" style="width: 100.0%; height: 100.0%;"><b>HM33</b><br><b>Mangueira</b><br><b>Mangi fera</b><br><b>ANACARDIACEAE</b><br><b>nan</b><br><b>5m</b><br><b>31,67cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/gLMdR9nS/Whats-App-Image-2025-10-16-at-14-37-39.jpg" width="200"><br><img src="https://i.ibb.co/tMb6t3G9/Whats-App-Image-2025-10-16-at-14-37-39-1.jpg" width="200"><br></div>`)[0];
+                popup_f9061bdc7494d8d964dd20f3e36471b3.setContent(html_c918eaf54e831070dd87dc8c441da6ce);
+            
+        
+
+        marker_a93356228f84b05e8902f18e03cd7ab6.bindPopup(popup_f9061bdc7494d8d964dd20f3e36471b3)
+        ;
+
+        
+    
+    
+                marker_a93356228f84b05e8902f18e03cd7ab6.setIcon(icon_07c67531ce21e84186f3949fc376999b);
+            
+    
+            var marker_19d70167f8e994dc4fed6a2f99ebe470 = L.marker(
+                [-23.547883, -46.652663],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_da8f6b068e614d1a61052b0c7bd8a96f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3747e0050772dab1f7c9003fe903fd7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de055e233bc29aa895abf2705b292869 = $(`<div id="html_de055e233bc29aa895abf2705b292869" style="width: 100.0%; height: 100.0%;"><b>HM34</b><br><b>Pata de vaca</b><br><b>Bauhinia</b><br><b>FABACEAE</b><br><b>nan</b><br><b>10,22m</b><br><b>46,95cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/LXRVzvBF/Whats-App-Image-2025-10-16-at-14-55-11.jpg" width="200"><br><img src="https://i.ibb.co/d0RW0cw1/Whats-App-Image-2025-10-16-at-14-55-11-1.jpg" width="200"><br></div>`)[0];
+                popup_3747e0050772dab1f7c9003fe903fd7d.setContent(html_de055e233bc29aa895abf2705b292869);
+            
+        
+
+        marker_19d70167f8e994dc4fed6a2f99ebe470.bindPopup(popup_3747e0050772dab1f7c9003fe903fd7d)
+        ;
+
+        
+    
+    
+                marker_19d70167f8e994dc4fed6a2f99ebe470.setIcon(icon_da8f6b068e614d1a61052b0c7bd8a96f);
+            
+    
+            var marker_ff586f3654b25f920e65edac03a7be57 = L.marker(
+                [-23.546934, -46.652119],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a92198f114537252b9670d27dddd536b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9dd44da643525b68c7c096479ec6b299 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c666d0e0c0fc549effe7b85cb670358 = $(`<div id="html_2c666d0e0c0fc549effe7b85cb670358" style="width: 100.0%; height: 100.0%;"><b>HM35</b><br><b>Escova de garrafa</b><br><b>Callistemon</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>8,46m</b><br><b>14,96cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/kZvw0T3/Whats-App-Image-2025-10-17-at-12-30-12.jpg" width="200"><br></div>`)[0];
+                popup_9dd44da643525b68c7c096479ec6b299.setContent(html_2c666d0e0c0fc549effe7b85cb670358);
+            
+        
+
+        marker_ff586f3654b25f920e65edac03a7be57.bindPopup(popup_9dd44da643525b68c7c096479ec6b299)
+        ;
+
+        
+    
+    
+                marker_ff586f3654b25f920e65edac03a7be57.setIcon(icon_a92198f114537252b9670d27dddd536b);
+            
+    
+            var marker_269b000805c233cb5e2c77afc35f9748 = L.marker(
+                [-23.54695, -46.65213],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_31f95ea7c64178cf0e00fae730330ddb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad4d681307fd497c14f5010dc35f66c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52debc1e9547b3eb135929dcf4722158 = $(`<div id="html_52debc1e9547b3eb135929dcf4722158" style="width: 100.0%; height: 100.0%;"><b>HM36</b><br><b>Escova de garrafa</b><br><b>Callistemon</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>13,33m</b><br><b>17,82cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/ymwgfdWN/Whats-App-Image-2025-10-17-at-12-34-53.jpg" width="200"><br><img src="https://i.ibb.co/0p1XjNLh/Whats-App-Image-2025-10-17-at-12-39-47.jpg" width="200"><br></div>`)[0];
+                popup_ad4d681307fd497c14f5010dc35f66c4.setContent(html_52debc1e9547b3eb135929dcf4722158);
+            
+        
+
+        marker_269b000805c233cb5e2c77afc35f9748.bindPopup(popup_ad4d681307fd497c14f5010dc35f66c4)
+        ;
+
+        
+    
+    
+                marker_269b000805c233cb5e2c77afc35f9748.setIcon(icon_31f95ea7c64178cf0e00fae730330ddb);
+            
+    
+            var marker_79391597f053aa795c339a30bca28e53 = L.marker(
+                [-23.54696, -46.652137],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_2d46533574f5fd8e85eaa19f33acd442 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f44b7dbd52bed72531757b40b8764ee9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0b768c0413f9fbbe26ed58db7b5eb60 = $(`<div id="html_a0b768c0413f9fbbe26ed58db7b5eb60" style="width: 100.0%; height: 100.0%;"><b>HM37</b><br><b>Escova de garrafa</b><br><b>Callistemon</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>12m</b><br><b>16,23cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/LDjc29fs/Whats-App-Image-2025-10-17-at-12-39-47-1.jpg" width="200"><br><img src="https://i.ibb.co/FbHSBs5Y/Whats-App-Image-2025-10-17-at-12-39-47-2.jpg" width="200"><br></div>`)[0];
+                popup_f44b7dbd52bed72531757b40b8764ee9.setContent(html_a0b768c0413f9fbbe26ed58db7b5eb60);
+            
+        
+
+        marker_79391597f053aa795c339a30bca28e53.bindPopup(popup_f44b7dbd52bed72531757b40b8764ee9)
+        ;
+
+        
+    
+    
+                marker_79391597f053aa795c339a30bca28e53.setIcon(icon_2d46533574f5fd8e85eaa19f33acd442);
+            
+    
+            var marker_69656abfe28bb2784f31b6527f698e7e = L.marker(
+                [-23.546109, -46.652358],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_c789af27f3023fd6bd413cd41b57256a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80473444519a3b52f4905d06fcf4409b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9ba13157537b156678b9faa3a946c2f = $(`<div id="html_f9ba13157537b156678b9faa3a946c2f" style="width: 100.0%; height: 100.0%;"><b>HM38</b><br><b>Jabuticabeira</b><br><b>Plinia</b><br><b>MYRTACEAE</b><br><b>nan</b><br><b>7,34m</b><br><b>20,37cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/mWgSwNG/Whats-App-Image-2025-10-17-at-12-55-53.jpg" width="200"><br><img src="https://i.ibb.co/BMfxZL7/Whats-App-Image-2025-10-17-at-12-55-53-1.jpg" width="200"><br></div>`)[0];
+                popup_80473444519a3b52f4905d06fcf4409b.setContent(html_f9ba13157537b156678b9faa3a946c2f);
+            
+        
+
+        marker_69656abfe28bb2784f31b6527f698e7e.bindPopup(popup_80473444519a3b52f4905d06fcf4409b)
+        ;
+
+        
+    
+    
+                marker_69656abfe28bb2784f31b6527f698e7e.setIcon(icon_c789af27f3023fd6bd413cd41b57256a);
+            
+    
+            var marker_374bfe9a156692dc4bf7cb89c89c0f3e = L.marker(
+                [-23.546213, -46.652214],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_4b399662d52e112d716f5341b338bd94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30a119aab06905d4f514c25e27095b4e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98e1a2397374b880696a97836f015ebd = $(`<div id="html_98e1a2397374b880696a97836f015ebd" style="width: 100.0%; height: 100.0%;"><b>HM39</b><br><b>Pinheiro</b><br><b>Pinus</b><br><b>PINACEAE</b><br><b>nan</b><br><b>25m</b><br><b>84,03cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/8SRcH1w/Whats-App-Image-2025-10-17-at-13-05-25.jpg" width="200"><br><img src="https://i.ibb.co/sX75pRL/Whats-App-Image-2025-10-17-at-13-05-25-1.jpg" width="200"><br></div>`)[0];
+                popup_30a119aab06905d4f514c25e27095b4e.setContent(html_98e1a2397374b880696a97836f015ebd);
+            
+        
+
+        marker_374bfe9a156692dc4bf7cb89c89c0f3e.bindPopup(popup_30a119aab06905d4f514c25e27095b4e)
+        ;
+
+        
+    
+    
+                marker_374bfe9a156692dc4bf7cb89c89c0f3e.setIcon(icon_4b399662d52e112d716f5341b338bd94);
+            
+    
+            var marker_1366d3c2f35f51c29c7354f4ce60e0c9 = L.marker(
+                [-23.545713, -46.652262],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_9e00f443c70c8d24b45f134f879e1029 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3092f16287f4ca2ec054c80c59922a4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ceca3bc310c2b3d728d5cc3b65548a1 = $(`<div id="html_7ceca3bc310c2b3d728d5cc3b65548a1" style="width: 100.0%; height: 100.0%;"><b>HM40</b><br><b>Sibipiruna </b><br><b>Caesalpinia</b><br><b>FABACEAE</b><br><b>nan</b><br><b>16m</b><br><b>109,49cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/93tNNykw/Whats-App-Image-2025-10-17-at-13-16-13.jpg" width="200"><br><img src="https://i.ibb.co/3YGrZL7p/Whats-App-Image-2025-10-17-at-13-16-12.jpg" width="200"><br></div>`)[0];
+                popup_3092f16287f4ca2ec054c80c59922a4d.setContent(html_7ceca3bc310c2b3d728d5cc3b65548a1);
+            
+        
+
+        marker_1366d3c2f35f51c29c7354f4ce60e0c9.bindPopup(popup_3092f16287f4ca2ec054c80c59922a4d)
+        ;
+
+        
+    
+    
+                marker_1366d3c2f35f51c29c7354f4ce60e0c9.setIcon(icon_9e00f443c70c8d24b45f134f879e1029);
+            
+    
+            var marker_2a334528207d34c796c2f572fa593d5b = L.marker(
+                [-23.545676, -46.652024],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_51e05a2ee4a4e127e2cf1bd13833f5d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_21cc4039896d5259aba079920583c8f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a7f222f412fd6ec0ba9a16841d32455 = $(`<div id="html_8a7f222f412fd6ec0ba9a16841d32455" style="width: 100.0%; height: 100.0%;"><b>HM41</b><br><b>Pinheiro</b><br><b>Pinus</b><br><b>PINACEAE</b><br><b>nan</b><br><b>16cm</b><br><b>45,83cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/nMj1LPwV/Whats-App-Image-2025-10-17-at-13-23-32.https://i.ibb.co/WpqrzS8j/Whats-App-Image-2025-10-17-at-13-23-19.jpg" width="200"><br></div>`)[0];
+                popup_21cc4039896d5259aba079920583c8f5.setContent(html_8a7f222f412fd6ec0ba9a16841d32455);
+            
+        
+
+        marker_2a334528207d34c796c2f572fa593d5b.bindPopup(popup_21cc4039896d5259aba079920583c8f5)
+        ;
+
+        
+    
+    
+                marker_2a334528207d34c796c2f572fa593d5b.setIcon(icon_51e05a2ee4a4e127e2cf1bd13833f5d1);
+            
+    
+            var marker_bd558e2850f1a400c227b0ba4ceb6ffb = L.marker(
+                [-23.547584, -46.650554],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_2bd6b0c0dd078f63a735eb0097dfbf4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e844387bb478ba1aced4177192a3e701 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49ec3f165a3f7d316d594e1a9f1d1bb3 = $(`<div id="html_49ec3f165a3f7d316d594e1a9f1d1bb3" style="width: 100.0%; height: 100.0%;"><b>HM42</b><br><b>Mangueira</b><br><b>Mangi fera</b><br><b>ANACARDIACEAE</b><br><b>nan</b><br><b>6,57m</b><br><b>37,84cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/S8QydhV/Whats-App-Image-2025-10-17-at-14-04-36.jpg" width="200"><br><img src="https://i.ibb.co/3y3B0cQ6/Whats-App-Image-2025-10-17-at-14-04-37.jpg" width="200"><br></div>`)[0];
+                popup_e844387bb478ba1aced4177192a3e701.setContent(html_49ec3f165a3f7d316d594e1a9f1d1bb3);
+            
+        
+
+        marker_bd558e2850f1a400c227b0ba4ceb6ffb.bindPopup(popup_e844387bb478ba1aced4177192a3e701)
+        ;
+
+        
+    
+    
+                marker_bd558e2850f1a400c227b0ba4ceb6ffb.setIcon(icon_2bd6b0c0dd078f63a735eb0097dfbf4b);
+            
+    
+            var marker_51f0f7614ee8e8bb977364a96bb5abf0 = L.marker(
+                [-23.547798, -46.650601],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_fc4d9a0d45be75cc38711266b701e5b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2256cb98ad9a769e3699ee5fcdb8728 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26ed870056d6146d2232e8f16d064df5 = $(`<div id="html_26ed870056d6146d2232e8f16d064df5" style="width: 100.0%; height: 100.0%;"><b>HM43</b><br><b>Sibipiruna </b><br><b>Caesalpinia</b><br><b>FABACEAE</b><br><b>nan</b><br><b>16m</b><br><b>46,47cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Qjh8MYnR/Whats-App-Image-2025-10-17-at-14-13-20.jpg" width="200"><br><img src="https://i.ibb.co/RTf5gV1K/Whats-App-Image-2025-10-17-at-14-13-20-1.jpg" width="200"><br></div>`)[0];
+                popup_e2256cb98ad9a769e3699ee5fcdb8728.setContent(html_26ed870056d6146d2232e8f16d064df5);
+            
+        
+
+        marker_51f0f7614ee8e8bb977364a96bb5abf0.bindPopup(popup_e2256cb98ad9a769e3699ee5fcdb8728)
+        ;
+
+        
+    
+    
+                marker_51f0f7614ee8e8bb977364a96bb5abf0.setIcon(icon_fc4d9a0d45be75cc38711266b701e5b4);
+            
+    
+            var marker_b487ffe788d09b642aa61785a72ebcfd = L.marker(
+                [-23.546668, -46.65179],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a2e53acafd7cf9a49e8b78d6824c3757 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cee20c4bb668b00346a8bffdcd56468a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1613195224360d411a938f063fc35072 = $(`<div id="html_1613195224360d411a938f063fc35072" style="width: 100.0%; height: 100.0%;"><b>HM44</b><br><b>Arália</b><br><b>Aralia</b><br><b>ARALIACEAE</b><br><b>nan</b><br><b>6,72m</b><br><b>33,42cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/JjqR6SXb/Whats-App-Image-2025-10-17-at-14-23-59.jpg" width="200"><br><img src="https://i.ibb.co/LX9jJZzx/Whats-App-Image-2025-10-17-at-14-23-58.jpg" width="200"><br></div>`)[0];
+                popup_cee20c4bb668b00346a8bffdcd56468a.setContent(html_1613195224360d411a938f063fc35072);
+            
+        
+
+        marker_b487ffe788d09b642aa61785a72ebcfd.bindPopup(popup_cee20c4bb668b00346a8bffdcd56468a)
+        ;
+
+        
+    
+    
+                marker_b487ffe788d09b642aa61785a72ebcfd.setIcon(icon_a2e53acafd7cf9a49e8b78d6824c3757);
+            
+    
+            var marker_7f85c2b870e7e290b98102cbd1bc54b3 = L.marker(
+                [-23.546716, -46.651832],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_0486bc778f43bea90764303c2a19f182 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b63750ad063c616187c5339023bdbf1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60c7741f418dc3b8d603eb11c653ce12 = $(`<div id="html_60c7741f418dc3b8d603eb11c653ce12" style="width: 100.0%; height: 100.0%;"><b>HM45</b><br><b>Arália</b><br><b>Aralia</b><br><b>ARALIACEAE</b><br><b>nan</b><br><b>6,72m</b><br><b>24,19cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Zp0878sp/Whats-App-Image-2025-10-17-at-14-27-38.jpg" width="200"><br><img src="https://i.ibb.co/qLds59mv/Whats-App-Image-2025-10-17-at-14-27-39.jpg" width="200"><br></div>`)[0];
+                popup_5b63750ad063c616187c5339023bdbf1.setContent(html_60c7741f418dc3b8d603eb11c653ce12);
+            
+        
+
+        marker_7f85c2b870e7e290b98102cbd1bc54b3.bindPopup(popup_5b63750ad063c616187c5339023bdbf1)
+        ;
+
+        
+    
+    
+                marker_7f85c2b870e7e290b98102cbd1bc54b3.setIcon(icon_0486bc778f43bea90764303c2a19f182);
+            
+    
+            var marker_8e307759b6c039bd0698a959fb8db2bc = L.marker(
+                [-23.546711, -46.65208],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_82f12196e5e12f7a5f378d2871cc6a08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e436cc94c315ef2b5217e32926eee713 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9885d1dc116cfc713a06fd07fa154a9c = $(`<div id="html_9885d1dc116cfc713a06fd07fa154a9c" style="width: 100.0%; height: 100.0%;"><b>HM46</b><br><b>Figueira chorona</b><br><b>Ficus</b><br><b>MORACEAE</b><br><b>nan</b><br><b>18m</b><br><b>74,16cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Nn2NVJKn/Whats-App-Image-2025-10-20-at-13-08-42-1.jpg" width="200"><br><img src="https://i.ibb.co/0jQxLNG0/Whats-App-Image-2025-10-20-at-13-08-42.jpg" width="200"><br></div>`)[0];
+                popup_e436cc94c315ef2b5217e32926eee713.setContent(html_9885d1dc116cfc713a06fd07fa154a9c);
+            
+        
+
+        marker_8e307759b6c039bd0698a959fb8db2bc.bindPopup(popup_e436cc94c315ef2b5217e32926eee713)
+        ;
+
+        
+    
+    
+                marker_8e307759b6c039bd0698a959fb8db2bc.setIcon(icon_82f12196e5e12f7a5f378d2871cc6a08);
+            
+    
+            var marker_9f837d9dcefc4589eb063f613e01a6c4 = L.marker(
+                [-23.546472, -46.652468],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_8e5bf55fa0d33df853a953be51a80a01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4513abed7f9db3218ac8a8871f0a1ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15906c595beb9a94b48418706a4f68b7 = $(`<div id="html_15906c595beb9a94b48418706a4f68b7" style="width: 100.0%; height: 100.0%;"><b>HM47</b><br><b>Jatobá</b><br><b>Hymenaea</b><br><b>FABACEAE</b><br><b>nan</b><br><b>13m</b><br><b>69,70cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/MxqhYJTQ/Whats-App-Image-2025-10-20-at-13-18-15.jpg" width="200"><br><img src="https://i.ibb.co/zV57PNjW/Whats-App-Image-2025-10-20-at-13-18-16.jpg" width="200"><br></div>`)[0];
+                popup_e4513abed7f9db3218ac8a8871f0a1ba.setContent(html_15906c595beb9a94b48418706a4f68b7);
+            
+        
+
+        marker_9f837d9dcefc4589eb063f613e01a6c4.bindPopup(popup_e4513abed7f9db3218ac8a8871f0a1ba)
+        ;
+
+        
+    
+    
+                marker_9f837d9dcefc4589eb063f613e01a6c4.setIcon(icon_8e5bf55fa0d33df853a953be51a80a01);
+            
+    
+            var marker_8f60aad521b99ddc9c0ba1f9f8de47f9 = L.marker(
+                [-23.546347, -46.652814],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_11a08bdcc9c74076e24d580e88a8ec6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_faf26475750dfcf577faf2e21617305c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d16f29086138e2aef72d166666bc6acf = $(`<div id="html_d16f29086138e2aef72d166666bc6acf" style="width: 100.0%; height: 100.0%;"><b>HM48</b><br><b>Mangueira</b><br><b>Mangi fera</b><br><b>ANACARDIACEAE</b><br><b>nan</b><br><b>8m</b><br><b>90,71cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/HpCdN53J/Whats-App-Image-2025-10-20-at-13-29-50.jpg" width="200"><br></div>`)[0];
+                popup_faf26475750dfcf577faf2e21617305c.setContent(html_d16f29086138e2aef72d166666bc6acf);
+            
+        
+
+        marker_8f60aad521b99ddc9c0ba1f9f8de47f9.bindPopup(popup_faf26475750dfcf577faf2e21617305c)
+        ;
+
+        
+    
+    
+                marker_8f60aad521b99ddc9c0ba1f9f8de47f9.setIcon(icon_11a08bdcc9c74076e24d580e88a8ec6b);
+            
+    
+            var marker_4c94ae8eaacb64938b8993d6202a4fc0 = L.marker(
+                [-23.547502, -46.651873],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_0fa50ac3b0f8ab58911ddb869ef990ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be84dc5efcdacaca703f1db8f6c65583 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c811760339811af1effeaaf031e8e998 = $(`<div id="html_c811760339811af1effeaaf031e8e998" style="width: 100.0%; height: 100.0%;"><b>HM49</b><br><b>Figueira chorona</b><br><b>Ficus</b><br><b>MORACEAE</b><br><b>nan</b><br><b>15m</b><br><b>81,80cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/HLqCnN6g/Whats-App-Image-2025-10-20-at-14-10-46.jpg" width="200"><br></div>`)[0];
+                popup_be84dc5efcdacaca703f1db8f6c65583.setContent(html_c811760339811af1effeaaf031e8e998);
+            
+        
+
+        marker_4c94ae8eaacb64938b8993d6202a4fc0.bindPopup(popup_be84dc5efcdacaca703f1db8f6c65583)
+        ;
+
+        
+    
+    
+                marker_4c94ae8eaacb64938b8993d6202a4fc0.setIcon(icon_0fa50ac3b0f8ab58911ddb869ef990ca);
+            
+    
+            var marker_cf3f49bdb7275437f0e9fcb3bdcbd3a5 = L.marker(
+                [-23.547936, -46.651786],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_759039fa426104584b16b181ff1cb47b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e0432fdbe6490f6a0330523553ecb6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d3502ca0db7b05249690189cfc083c6 = $(`<div id="html_7d3502ca0db7b05249690189cfc083c6" style="width: 100.0%; height: 100.0%;"><b>HM50</b><br><b>Abacateiro</b><br><b>Persa</b><br><b>LAURACEAE</b><br><b>nan</b><br><b>17m</b><br><b>83,07cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/Z1SMGGDz/Whats-App-Image-2025-10-20-at-14-38-42.jpg" width="200"><br><img src="https://i.ibb.co/YTDCfndt/Whats-App-Image-2025-10-20-at-14-38-42-1.jpg" width="200"><br></div>`)[0];
+                popup_7e0432fdbe6490f6a0330523553ecb6c.setContent(html_7d3502ca0db7b05249690189cfc083c6);
+            
+        
+
+        marker_cf3f49bdb7275437f0e9fcb3bdcbd3a5.bindPopup(popup_7e0432fdbe6490f6a0330523553ecb6c)
+        ;
+
+        
+    
+    
+                marker_cf3f49bdb7275437f0e9fcb3bdcbd3a5.setIcon(icon_759039fa426104584b16b181ff1cb47b);
+            
+    
+            var marker_da6e9d6e0fc448a4bbe6a5cb463a13df = L.marker(
+                [-23.547863, -46.651901],
+                {
+}
+            ).addTo(map_1a577199adbabf84c363aec11563020b);
+        
+    
+            var icon_a8b3526c87ef47e293e335c2f43cd155 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tree",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0089022340f92295714e5dfbc71a025b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0769270b951a5f9d9c9e7483471ff58c = $(`<div id="html_0769270b951a5f9d9c9e7483471ff58c" style="width: 100.0%; height: 100.0%;"><b>HM51</b><br><b>Pau formiga</b><br><b>Triplaris</b><br><b>POLYGONACEAE</b><br><b>nan</b><br><b>4m</b><br><b>13,68cm</b><br><a href="nan" target="_blank">Abrir ficha</a><br><img src="https://i.ibb.co/0jT970nS/Whats-App-Image-2025-10-20-at-14-55-07-1.jpg" width="200"><br><img src="https://i.ibb.co/W4B51jPt/Whats-App-Image-2025-10-20-at-14-55-07.jpg" width="200"><br><img src="https://i.ibb.co/XrgpVSQL/Whats-App-Image-2025-10-20-at-15-01-19.jpg" width="200"><br></div>`)[0];
+                popup_0089022340f92295714e5dfbc71a025b.setContent(html_0769270b951a5f9d9c9e7483471ff58c);
+            
+        
+
+        marker_da6e9d6e0fc448a4bbe6a5cb463a13df.bindPopup(popup_0089022340f92295714e5dfbc71a025b)
+        ;
+
+        
+    
+    
+                marker_da6e9d6e0fc448a4bbe6a5cb463a13df.setIcon(icon_a8b3526c87ef47e293e335c2f43cd155);
+            
+</script>
+</html>
