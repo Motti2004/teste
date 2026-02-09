@@ -75,9 +75,10 @@ elif pagina == "Cadastro de árvore":
 
                 supabase.storage.from_(bucket_name).upload(
                     file_name,
-                    foto.getvalue(), 
-                    {"content-type": foto.type, "upsert": True}
-                )
+                    foto.getvalue(),
+                    file_options={"content-type": foto.type}
+                    )
+
 
                 foto_url = supabase.storage.from_(bucket_name).get_public_url(file_name)
 
