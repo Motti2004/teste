@@ -43,27 +43,47 @@ elif pagina == "Sobre o projeto":
     st.info("Passo 3: verificar se as coordenadas estão na barra de pesquisa ou estão no icone de marcador localização que esta na aba de baixo do mapa e copie as coordenadas.")
     st.image("Passo 3.jpeg", width=300)
 
-
 elif pagina == "Cadastro de árvore":
     st.subheader("Cadastre a sua árvore")
     st.info("Aqui você podera cadastrar a sua arvore e manda-la para ser analisada pelo herbario da Universiade Mackenzie de São Paulo.")
+
     form = st.form(key="árvore", clear_on_submit=True)
+
     with form:
         input_name = st.text_input("Nome: ", placeholder="Insira seu nome aqui.")
         input_email = st.text_input("Email: ", placeholder="Insira seu email aqui.")
         input_telefone = st.text_input("Telefone: ", placeholder="Insira seu número de telefone aqui.")
         input_altura = st.text_input("Altura(m)", placeholder="Exemplo: 9, 3.5, 1.80, etc..")
         input_diametro = st.text_input("Diametro(cm)", placeholder="Exemplo: 10, 40, 80, etc. .")
-        input_caracteristicas = st.text_input("Características", placeholder="Ex: formatoda folha, cor da flor, como é o fruto e etc.")
+        input_caracteristicas = st.text_input("Características", placeholder="Ex: formato da folha, cor da flor, como é o fruto e etc.")
         input_coordenadas = st.text_input("Coordenadas", placeholder="Exemplo: -23.5... e -46.8...")
-        foto = st.file_uploader("Envie uma foto da árvore (altura, diametro, folha, flor, fruto e árvore ): u", type=["jpg","png","jpeg"])
+
+        foto = st.file_uploader(
+            "Envie uma foto da árvore (altura, diametro, folha, flor, fruto e árvore):",
+            type=["jpg", "png", "jpeg"]
+        )
+
         botão_submit = form.form_submit_button("Confirmar")
+
     if botão_submit:
         foto_url = None
+
         if foto is not None:
-                file_name = f"{input_name}_{foto.name}"
-                supabase.storage.from_("Fotos_das_arvores").upload(file_name, foto.getbuffer(),{"upsert": True})
-                foto_url = supabase.storage.from_("Fotos_das_arvores").get_public_url(file_name)
+            try:
+                bucket_name = "Fotos das arvores"  # <-- nome EXATO do bucket
+                file_name = f"{input_name.strip()}_{foto.name.strip()}"
+
+                supabase.storage.from_(bucket_name).upload(
+                    file_name,
+                    foto.getvalue(),  # <-- correto
+                    {"content-type": foto.type, "upsert": True}
+                )
+
+                foto_url = supabase.storage.from_(bucket_name).get_public_url(file_name)
+
+            except Exception as e:
+                st.error(f"Erro ao enviar imagem para o Supabase Storage: {e}")
+
         data = {
             "nome": input_name,
             "email": input_email,
@@ -72,19 +92,21 @@ elif pagina == "Cadastro de árvore":
             "diametro": input_diametro,
             "caracteristicas": input_caracteristicas,
             "coordenadas": input_coordenadas,
-            "foto": foto_url}
+            "foto": foto_url
+        }
+
         try:
             response = supabase.from_("arvores_cadastradas").insert(data).execute()
             st.success("Árvore cadastrada com sucesso! Enviada para análise e marcada no mapa.")
             st.write("Retorno do Supabase:", response)
+
         except Exception as e:
             st.error(f"Erro ao cadastrar árvore: {e}")
 
 elif pagina == "Calculo de biomasssa de carbono":
-    num_1= st.number_input(label="Digite o diametro da árvore", format="%0f")
-    num_2= st.number_input(label="Digite a altura da árvore ", format="%0f")
-    colunas = st.columns(1)
-    with colunas[0]:
-        if st.button(label="calcular", use_container_width=True):
-            resultado= 0.0334330*(num_1**2.397902)*(num_2**0.426536)
-            st.write(f"O resultado de biomassa é: {resultado}")
+    num_1 = st.number_input(label="Digite o diametro da árvore", format="%0f")
+    num_2 = st.number_input(label="Digite a altura da árvore", format="%0f")
+
+    if st.button(label="calcular", use_container_width=True):
+        resultado = 0.0334330 * (num_1 ** 2.397902) * (num_2 ** 0.426536)
+        st.write(f"O resultado de biomassa é: {resultado}")
