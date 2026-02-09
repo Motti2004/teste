@@ -70,12 +70,12 @@ elif pagina == "Cadastro de árvore":
 
         if foto is not None:
             try:
-                bucket_name = "Fotos das arvores"  # <-- nome EXATO do bucket
+                bucket_name = "Fotos das arvores"  
                 file_name = f"{input_name.strip()}_{foto.name.strip()}"
 
                 supabase.storage.from_(bucket_name).upload(
                     file_name,
-                    foto.getvalue(),  # <-- correto
+                    foto.getvalue(), 
                     {"content-type": foto.type, "upsert": True}
                 )
 
