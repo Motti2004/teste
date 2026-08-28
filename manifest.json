@@ -1,0 +1,21 @@
+{
+  "id": "leaf-search-mackenzie",
+  "name": "Leaf Search",
+  "short_name": "LeafSearch",
+  "description": "Aplicativo de mapeamento de árvores da região de Higienópolis, desenvolvido para o projeto do Herbário da Universidade Presbiteriana Mackenzie. Permite visualizar árvores cadastradas no mapa, cadastrar novas árvores com fotos e dados, e calcular a biomassa de carbono.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "pt-BR",
+  "theme_color": "##9ccf99",
+  "background_color": "#fffd8f",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/Motti2004/teste/main/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

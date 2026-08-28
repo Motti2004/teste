@@ -2,9 +2,19 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 from supabase import create_client, Client
-
-supabase_url=("https://qrqzmiodksobvufaqmdx.supabase.co")
-supabase_key=("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFycXptaW9ka3NvYnZ1ZmFxbWR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MzM2OTQsImV4cCI6MjA3NTAwOTY5NH0.MXWNzHQizABV0_5vS1bp__R1ozlF48G-uvQzZ9X-yOI")
+components.html("""
+<script>
+  var link = window.parent.document.querySelector("link[rel='manifest']");
+  if (!link) {
+    link = window.parent.document.createElement('link');
+    link.rel = 'manifest';
+    window.parent.document.head.appendChild(link);
+  }
+  link.href = 'https://raw.githubusercontent.com/Motti2004/teste/main/manifest.json';
+</script>
+""", height=0, width=0)
+supabase_url = ("https://qrqzmiodksobvufaqmdx.supabase.co")
+supabase_key = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFycXptaW9ka3NvYnZ1ZmFxbWR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk0MzM2OTQsImV4cCI6MjA3NTAwOTY5NH0.MXWNzHQizABV0_5vS1bp__R1ozlF48G-uvQzZ9X-yOI")
 
 supabase: Client = create_client(supabase_url, supabase_key)
 
@@ -20,7 +30,7 @@ O site e o mapa estão em fase de teste""")
     st.subheader("Bem vindo ao Leaf Search!")
     st.info("Você poderá visualizar as árvores cadastradas no bairro de Higienópolis.")
     with open("Teste_de_árvore.html", "r", encoding="utf-8") as t:
-       Teste_html = t.read()
+        Teste_html = t.read()
     components.html(Teste_html, height=600)
 
 elif pagina == "Árvores cadastradas":
@@ -50,13 +60,20 @@ elif pagina == "Cadastro de árvore":
     form = st.form(key="árvore", clear_on_submit=True)
 
     with form:
-        input_name = st.text_input("Nome: ", placeholder="Insira seu nome aqui.")
-        input_email = st.text_input("Email: ", placeholder="Insira seu email aqui.")
-        input_telefone = st.text_input("Telefone: ", placeholder="Insira seu número de telefone aqui.")
-        input_altura = st.text_input("Altura(m)", placeholder="Exemplo: 9, 3.5, 1.80, etc..")
-        input_diametro = st.text_input("Diametro(cm)", placeholder="Exemplo: 10, 40, 80, etc. .")
-        input_caracteristicas = st.text_input("Características", placeholder="Ex: formato da folha, cor da flor, como é o fruto e etc.")
-        input_coordenadas = st.text_input("Coordenadas", placeholder="Exemplo: -23.5... e -46.8...")
+        input_name = st.text_input(
+            "Nome: ", placeholder="Insira seu nome aqui.")
+        input_email = st.text_input(
+            "Email: ", placeholder="Insira seu email aqui.")
+        input_telefone = st.text_input(
+            "Telefone: ", placeholder="Insira seu número de telefone aqui.")
+        input_altura = st.text_input(
+            "Altura(m)", placeholder="Exemplo: 9, 3.5, 1.80, etc..")
+        input_diametro = st.text_input(
+            "Diametro(cm)", placeholder="Exemplo: 10, 40, 80, etc. .")
+        input_caracteristicas = st.text_input(
+            "Características", placeholder="Ex: formato da folha, cor da flor, como é o fruto e etc.")
+        input_coordenadas = st.text_input(
+            "Coordenadas", placeholder="Exemplo: -23.5... e -46.8...")
 
         foto = st.file_uploader(
             "Envie uma foto da árvore (altura, diametro, folha, flor, fruto e árvore):",
@@ -70,17 +87,17 @@ elif pagina == "Cadastro de árvore":
 
         if foto is not None:
             try:
-                bucket_name = "Fotos das arvores"  
+                bucket_name = "Fotos das arvores"
                 file_name = f"{input_name.strip()}_{foto.name.strip()}"
 
                 supabase.storage.from_(bucket_name).upload(
                     file_name,
                     foto.getvalue(),
                     file_options={"content-type": foto.type}
-                    )
+                )
 
-
-                foto_url = supabase.storage.from_(bucket_name).get_public_url(file_name)
+                foto_url = supabase.storage.from_(
+                    bucket_name).get_public_url(file_name)
 
             except Exception as e:
                 st.error(f"Erro ao enviar imagem para o Supabase Storage: {e}")
@@ -97,8 +114,10 @@ elif pagina == "Cadastro de árvore":
         }
 
         try:
-            response = supabase.from_("arvores_cadastradas").insert(data).execute()
-            st.success("Árvore cadastrada com sucesso! Enviada para análise e marcada no mapa.")
+            response = supabase.from_(
+                "arvores_cadastradas").insert(data).execute()
+            st.success(
+                "Árvore cadastrada com sucesso! Enviada para análise e marcada no mapa.")
             st.write("Retorno do Supabase:", response)
 
         except Exception as e:
