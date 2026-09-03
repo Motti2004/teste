@@ -79,40 +79,13 @@ O site e o mapa estão em fase de teste""")
         st.caption(
             f"Mostrando todas as {len(df_filtrado)} árvores cadastradas.")
  
-    figura = folium.Figure(height="1400px")
+ 
     mapa = folium.Map(
         location=[-23.546761091636284, -46.651802547369144], zoom_start=16
     ).add_to(figura)
     LocateControl(showPopup=False).add_to(mapa)
  
-    # ---- Caixinha de coordenadas em tempo real ----
-    nome_do_mapa = mapa.get_name()
- 
-    caixa_html = """
-    <div id="coord-display" style="
-        position:absolute; top:10px; left:60px; z-index:9999;
-        background:white; padding:12px 20px; border-radius:10px;
-        box-shadow:0 2px 6px rgba(0,0,0,0.4); font-family:sans-serif; font-size:20px; font-weight:bold;">
-        📍 Localização: aguardando...
-    </div>
-    """
-    mapa.get_root().html.add_child(folium.Element(caixa_html))
- 
-    script_coordenadas = f"""
-    {nome_do_mapa}.on('locationfound', function(e) {{
-        var texto_coordenadas = "📍 " + e.latlng.lat.toFixed(6) + ", " + e.latlng.lng.toFixed(6);
- 
-        document.getElementById('coord-display').innerHTML =
-            "📍 Localização: " + e.latlng.lat.toFixed(6) + ", " + e.latlng.lng.toFixed(6);
- 
-        L.popup()
-            .setLatLng(e.latlng)
-            .setContent(texto_coordenadas)
-            .openOn({nome_do_mapa});
-    }});
-    """
-    mapa.get_root().script.add_child(folium.Element(script_coordenadas))
-    # ---- Fim da caixinha de coordenadas ----
+    
  
     for _, row in df_filtrado.iterrows():
         imagens = str(row["imagem"]).split(",")
