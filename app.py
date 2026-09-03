@@ -86,7 +86,7 @@ O site e o mapa estão em fase de teste""")
     for _, row in df_filtrado.iterrows():
         imagens = str(row["imagem"]).split(",")
         imagens_html = "".join(
-            f'<img src="{img.strip()}" width="100"><br>' for img in imagens if img.strip()
+            f'<img src="{img.strip()}" width="200"><br>' for img in imagens if img.strip()
         )
         folium.Marker(
             location=[row["latitude"], row["longitude"]],
@@ -103,7 +103,7 @@ O site e o mapa estão em fase de teste""")
                 "marcador de arvore.png", icon_size=(30, 30)),
         ).add_to(mapa)
 
-    components.html(mapa._repr_html_(), height=1000)
+    components.html(mapa._repr_html_(), height=1400)
 
 
 elif pagina == "Árvores cadastradas":
