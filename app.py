@@ -117,7 +117,7 @@ O site e o mapa estão em fase de teste""")
                    f'<a href="{row["link"]}" target="_blank">Abrir ficha</a><br>'
                    f'{imagens_html}'),
             icon=folium.CustomIcon(
-                "marcador de arvore.png", icon_size=(50, 50)),
+                "marcador de arvore.png", icon_size=(30, 30)),
         ).add_to(mapa)
 
     components.html(mapa._repr_html_(), height=800)
