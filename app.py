@@ -82,24 +82,7 @@ O site e o mapa estão em fase de teste""")
     mapa = folium.Map(
         location=[-23.546761091636284, -46.651802547369144], zoom_start=16)
     LocateControl().add_to(mapa)
-    nome_do_mapa = mapa.get_name()
- 
-    caixa_coordenadas = f"""
-    <div id="coord-display" style="
-        position:absolute; top:10px; left:60px; z-index:9999;
-        background:white; padding:12px 20px; border-radius:10px;
-        box-shadow:0 2px 6px rgba(0,0,0,0.4); font-family:sans-serif; font-size:20px; font-weight:bold;">
-        📍 Localização: aguardando...
-    </div>
-    <script>
-        {nome_do_mapa}.on('locationfound', function(e) {{
-            document.getElementById('coord-display').innerHTML =
-                "📍 Localização: " + e.latlng.lat.toFixed(6) + ", " + e.latlng.lng.toFixed(6);
-        }});
-    </script>
-    """
-    mapa.get_root().html.add_child(folium.Element(caixa_coordenadas))
-
+    
     for _, row in df_filtrado.iterrows():
         imagens = str(row["imagem"]).split(",")
         imagens_html = "".join(
