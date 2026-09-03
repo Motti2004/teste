@@ -103,7 +103,7 @@ O site e o mapa estão em fase de teste""")
                 "marcador de arvore.png", icon_size=(30, 30)),
         ).add_to(mapa)
 
-    components.html(mapa._repr_html_(), height=1400)
+    components.html(mapa._repr_html_(), height="1000px")
 
 
 elif pagina == "Árvores cadastradas":
