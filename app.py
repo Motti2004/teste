@@ -4,7 +4,8 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 import folium
-from folium.plugins import LocateControl
+from streamlit_folium import st_folium
+from streamlit_geolocation import streamlit_geolocation
 from supabase import create_client, Client
 
 
@@ -79,9 +80,26 @@ O site e o mapa estão em fase de teste""")
         st.caption(
             f"Mostrando todas as {len(df_filtrado)} árvores cadastradas.")
 
+  
+    st.write("**📍 Toque no botão para ver sua localização atual:**")
+    localizacao = streamlit_geolocation()
+    if localizacao and localizacao.get("latitude"):
+        st.success(
+            f"📍 Sua localização: {localizacao['latitude']:.6f}, "
+            f"{localizacao['longitude']:.6f}"
+        )
+  
+
     mapa = folium.Map(
         location=[-23.546761091636284, -46.651802547369144], zoom_start=16)
-    LocateControl().add_to(mapa)
+
+ 
+    if localizacao and localizacao.get("latitude"):
+        folium.Marker(
+            location=[localizacao["latitude"], localizacao["longitude"]],
+            popup="📍 Você está aqui",
+            icon=folium.Icon(color="blue", icon="user"),
+        ).add_to(mapa)
 
     for _, row in df_filtrado.iterrows():
         imagens = str(row["imagem"]).split(",")
@@ -103,7 +121,7 @@ O site e o mapa estão em fase de teste""")
                 "marcador de arvore.png", icon_size=(30, 30)),
         ).add_to(mapa)
 
-    components.html(mapa._repr_html_(), height = 1000, width=1000)
+    st_folium(mapa, width=700, height=1000, use_container_width=True)
 
 
 elif pagina == "Árvores cadastradas":
