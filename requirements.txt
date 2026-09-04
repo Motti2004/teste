@@ -1,6 +1,7 @@
 streamlit
 pandas
+openpyxl
+supabase
 folium
 streamlit-folium
-supabase
-openpyxl
+streamlit-geolocation
