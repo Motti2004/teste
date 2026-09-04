@@ -49,6 +49,11 @@ def filtrar_dataframe(df, busca):
     return df[mask]
 
 
+@st.cache_data
+def carregar_dados():
+    return pd.read_excel("Dados_teste.xlsx")
+
+
 st.set_page_config(page_title="Leaf Search")
 st.sidebar.header("Menu")
 pagina = st.sidebar.radio("Escolha uma página", [
@@ -69,7 +74,7 @@ O site e o mapa estão em fase de teste""")
 
     busca = st.text_input("🔍 Buscar árvore (nome, gênero, família...)")
 
-    df_mapa = pd.read_excel("Dados_teste.xlsx")
+    df_mapa = carregar_dados()
     df_filtrado = filtrar_dataframe(df_mapa, busca)
 
     if busca and df_filtrado.empty:
@@ -80,7 +85,7 @@ O site e o mapa estão em fase de teste""")
         st.caption(
             f"Mostrando todas as {len(df_filtrado)} árvores cadastradas.")
 
-  
+    # ---- Localização em tempo real (via streamlit-geolocation) ----
     st.write("**📍 Toque no botão para ver sua localização atual:**")
     localizacao = streamlit_geolocation()
     if localizacao and localizacao.get("latitude"):
@@ -88,17 +93,22 @@ O site e o mapa estão em fase de teste""")
             f"📍 Sua localização: {localizacao['latitude']:.6f}, "
             f"{localizacao['longitude']:.6f}"
         )
-  
+    # ---- Fim da localização em tempo real ----
 
     mapa = folium.Map(
         location=[-23.546761091636284, -46.651802547369144], zoom_start=16)
 
- 
+    # Se já temos a localização do usuário, marca ela no mapa também
     if localizacao and localizacao.get("latitude"):
-        folium.Marker(
+        folium.CircleMarker(
             location=[localizacao["latitude"], localizacao["longitude"]],
+            radius=8,
+            color="white",
+            weight=2,
+            fill=True,
+            fill_color="#3388ff",
+            fill_opacity=1.0,
             popup="📍 Você está aqui",
-            icon=folium.Icon(color="blue", icon="user"),
         ).add_to(mapa)
 
     for _, row in df_filtrado.iterrows():
@@ -118,15 +128,22 @@ O site e o mapa estão em fase de teste""")
                    f'<a href="{row["link"]}" target="_blank">Abrir ficha</a><br>'
                    f'{imagens_html}'),
             icon=folium.CustomIcon(
-                "marcador de arvore.png", icon_size=(30, 30)),
+                "marcador de arvore.png", icon_size=(28, 28)),
         ).add_to(mapa)
 
-    st_folium(mapa, width=700, height=1000, use_container_width=True)
+    st_folium(
+        mapa,
+        width=700,
+        height=1000,
+        use_container_width=True,
+        key="mapa_arvores",
+        returned_objects=[],
+    )
 
 
 elif pagina == "Árvores cadastradas":
     st.subheader("Árvores cadastradas")
-    df_lista = pd.read_excel("Dados_teste.xlsx")
+    df_lista = carregar_dados()
     st.dataframe(df_lista)
 
 
