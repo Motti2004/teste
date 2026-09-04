@@ -133,8 +133,8 @@ O site e o mapa estão em fase de teste""")
 
     st_folium(
         mapa,
-        width=700,
-        height=1000,
+        width=600,
+        height=900,
         use_container_width=True,
         key="mapa_arvores",
         returned_objects=[],
