@@ -245,12 +245,21 @@ elif pagina == "Cadastro de árvore":
             st.error(f"Erro ao cadastrar árvore: {e}")
 
 
-elif pagina == "Calculo de biomasssa de carbono":
+elif pagina == "Calculo de biomasssa e de carbono":
     num_1 = st.number_input(
         label="Digite o diâmetro da árvore em centimetros(cm)", format="%0f")
     num_2 = st.number_input(
         label="Digite a altura da árvore em metros(m)", format="%0f")
-
+ 
     if st.button(label="Calcular", use_container_width=True):
-        resultado = 0.0334330 * (num_1 ** 2.397902) * (num_2 ** 0.426536)
-        st.write(f"O resultado de biomassa é: {resultado:.2f}kg")
+        biomassa = 0.0334330 * (num_1 ** 2.397902) * (num_2 ** 0.426536)
+        carbono = biomassa * 0.45
+ 
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric(label="🌳 Biomassa", value=f"{biomassa:.2f} kg")
+        with col2:
+            st.metric(label="🌍 Carbono", value=f"{carbono:.2f} kg")
+ 
+        st.caption("O carbono é estimado em 45% do valor da biomassa.")
+ 
