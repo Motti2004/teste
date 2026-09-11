@@ -61,7 +61,7 @@ pagina = st.sidebar.radio("Escolha uma página", [
     "Sobre o projeto",
     "Árvores cadastradas",
     "Cadastro de árvore",
-    "Calculo de biomasssa de carbono",
+    "Calculo de biomassa e de carbono",
 ])
 
 
