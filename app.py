@@ -245,7 +245,7 @@ elif pagina == "Cadastro de árvore":
             st.error(f"Erro ao cadastrar árvore: {e}")
 
 
-elif pagina == "Calculo de biomasssa e de carbono":
+elif pagina == "Calculo de biomassa e de carbono":
     num_1 = st.number_input(
         label="Digite o diâmetro da árvore em centimetros(cm)", format="%0f")
     num_2 = st.number_input(
