@@ -257,9 +257,9 @@ elif pagina == "Calculo de biomasssa e de carbono":
  
         col1, col2 = st.columns(2)
         with col1:
-            st.metric(label="🌳 Biomassa", value=f"{biomassa:.2f} kg")
+            st.metric(label="Biomassa", value=f"{biomassa:.2f} kg")
         with col2:
-            st.metric(label="🌍 Carbono", value=f"{carbono:.2f} kg")
+            st.metric(label="Carbono", value=f"{carbono:.2f} kg")
  
         st.caption("O carbono é estimado em 45% do valor da biomassa.")
  
