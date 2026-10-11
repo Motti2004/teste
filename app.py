@@ -253,7 +253,7 @@ elif pagina == "Calculo de biomassa e de carbono":
  
     if st.button(label="Calcular", use_container_width=True):
         biomassa = 0.0334330 * (num_1 ** 2.397902) * (num_2 ** 0.426536)
-        carbono = biomassa * 0.45
+        carbono = biomassa * 0.47
  
         col1, col2 = st.columns(2)
         with col1:
@@ -261,5 +261,5 @@ elif pagina == "Calculo de biomassa e de carbono":
         with col2:
             st.metric(label="Carbono", value=f"{carbono:.2f} kg")
  
-        st.caption("O carbono é estimado em 45% do valor da biomassa.")
+        st.caption("O carbono é estimado em 47% do valor da biomassa.")
  
