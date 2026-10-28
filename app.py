@@ -68,7 +68,7 @@ pagina = st.sidebar.radio("Escolha uma página", [
 if pagina == "Mapa":
     st.write("""
 # Mapa de árvores da Região do Higienopolis
-Feito por Timóteo Jeun Oh e orientado por Leandro Tavares Azevedo Vieira""")
+feito por Timóteo Jeun Oh e orientado por Leandro Tavares Azevedo Vieira""")
     st.write("""O site e o mapa estão em fase de teste""")
     st.subheader("Bem vindo ao Leaf Search!")
     st.info("Você poderá visualizar as árvores cadastradas no bairro de Higienópolis.")
