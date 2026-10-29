@@ -161,7 +161,7 @@ elif pagina == "Sobre o projeto":
     st.info("- Registro de informações (complete todas as informações de forma coerente "
             "e no devido lugar para não misturar as informações.)")
     st.info("- Altura e Diâmetro (para fazer a comparação de altura e diâmetro é "
-            "recomendável utilizar uma régua ou algo como referência.)")
+            "recomendável utilizar uma régua ou algo como referência e uma fita métrica.)")
     st.info("- Fotos (as fotos devem estar em boa resolução e sem estar tremidas ou borradas.)")
     st.info("- Coordenadas (para encontrar as coordenadas é necessário entrar no "
             "aplicativo de localização e clicar no local desejado.)")
