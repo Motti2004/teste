@@ -167,9 +167,9 @@ elif pagina == "Sobre o projeto":
             "aplicativo de localização e clicar no local desejado.)")
 
     st.info("Formas de encontrar as coordenadas.")
-    st.image("Localizar.jpeg", width=600)
+    st.image("Localizar.jpeg", width=800)
     st.info("Como coletar a circunferência e diâmentro do tronco")
-    st.image("DAP.jpeg", width=600)
+    st.image("DAP.jpeg", width=800)
 
 
 elif pagina == "Cadastro de árvore":
