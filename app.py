@@ -166,9 +166,9 @@ elif pagina == "Sobre o projeto":
     st.info("- Coordenadas (para encontrar as coordenadas é necessário entrar no "
             "aplicativo de localização e clicar no local desejado.)")
 
-    st.info("Formas de encontrar as coordenadas.")
+    st.info("Como obter a Localização e coordenadas.")
     st.image("Localizar.jpeg", width=800)
-    st.info("Como coletar a circunferência e diâmentro do tronco")
+    st.info("Como medir e calcular o DAP de uma árvore")
     st.image("DAP.jpeg", width=800)
 
 
