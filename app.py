@@ -86,7 +86,7 @@ feito por Timóteo Jeun Oh e orientado por Leandro Tavares Azevedo Vieira""")
         st.caption(
             f"Mostrando todas as {len(df_filtrado)} árvores cadastradas.")
 
-    # ---- Localização em tempo real (via streamlit-geolocation) ----
+  
     st.write("**📍 Toque no botão para ver sua localização atual:**")
     localizacao = streamlit_geolocation()
     if localizacao and localizacao.get("latitude"):
@@ -94,12 +94,12 @@ feito por Timóteo Jeun Oh e orientado por Leandro Tavares Azevedo Vieira""")
             f"📍 Sua localização: {localizacao['latitude']:.6f}, "
             f"{localizacao['longitude']:.6f}"
         )
-    # ---- Fim da localização em tempo real ----
+   
 
     mapa = folium.Map(
         location=[-23.546761091636284, -46.651802547369144], zoom_start=16)
 
-    # Se já temos a localização do usuário, marca ela no mapa também
+    
     if localizacao and localizacao.get("latitude"):
         folium.CircleMarker(
             location=[localizacao["latitude"], localizacao["longitude"]],
@@ -166,13 +166,10 @@ elif pagina == "Sobre o projeto":
     st.info("- Coordenadas (para encontrar as coordenadas é necessário entrar no "
             "aplicativo de localização e clicar no local desejado.)")
 
-    st.info("Passo 1: abra o aplicativo de localização.")
-    st.image("Passo 1.jpeg", width=300)
-    st.info("Passo 2: selecione a área desejada.")
-    st.image("Passo 2.jpeg", width=300)
-    st.info("Passo 3: verifique se as coordenadas estão na barra de pesquisa ou no ícone "
-            "de marcador de localização na aba de baixo do mapa, e copie as coordenadas.")
-    st.image("Passo 3.jpeg", width=300)
+    st.info("Formas de encontrar as coordenadas.")
+    st.image("Localizar.jpeg", width=300)
+    st.info("Como coletar a circunferência e diâmentro do tronco")
+    st.image("DAP.jpeg", width=300)
 
 
 elif pagina == "Cadastro de árvore":
